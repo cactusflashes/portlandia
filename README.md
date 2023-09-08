@@ -14,6 +14,6 @@
 ---
 
 ## Stack 
-### SvelteKit for framework 
-### Netlify for deployment
-### Svelte-Animated-Headline by Elron for Slugger 
+#### SvelteKit for framework 
+#### Netlify for deployment
+#### Svelte-Animated-Headline by Elron for Slugger 
