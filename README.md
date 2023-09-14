@@ -12,7 +12,7 @@
 ###### Homepage is about 75% to 80% complete at this stage. I need to polish some of the viewport scalability and positioning of child elements, but I am in a good spot now with the functionality. The real chore is going to be going back and procuring the data from past 3 years' projects and giving them a polish and shine. 
 
 ##### Update Sept. 13th, 2023 7:16 p.m. 
-###### Hitting a mental block with the portfolio project and not sure where to jump back into the workflow. I think that I'm going to focus on the project information first before coming back to the page contents. 
+###### Hitting a mental block with the portfolio project and am not sure where to jump back into the workflow. I think that I'm going to focus on the project information first before coming back to the page contents. 
 
 ---
 
