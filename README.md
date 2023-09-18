@@ -15,11 +15,7 @@
 ###### Hitting a mental block with the portfolio project and am not sure where to jump back into the workflow. I think that I'm going to focus on the project information first before coming back to the page contents. 
 
 ##### Update Sept. 17th, 2023 9:11 p.m.
-###### Made some good progress breaking through my mental block on my portfolio and making some strides with the responsive mobile version of my site. Some mocks are included below. 
-
-<img src="https://github.com/cactusflashes/portlandia/assets/121457318/0eb4971b-4b95-4504-b3b3-d5f6280e870b"
-  style="scale: .2">
-<img src="[https://github.com/cactusflashes/portlandia/assets/121457318/0eb4971b-4b95-4504-b3b3-d5f6280e870b](https://github.com/cactusflashes/portlandia/assets/121457318/51abfe24-37b5-45f9-9425-752eaec00275)" style="scale: .2">
+###### Made some good progress breaking through my mental block on my portfolio and making some strides with the responsive mobile version of my site. Still have to polish a few things around the edges but I'm feeling a lot better moving forward, and hope to have some project pages done soon, after I can put the proverbial pin in the homepage. 
 
 ## Stack 
 #### SvelteKit for framework 
