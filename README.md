@@ -14,7 +14,10 @@
 ##### Update Sept. 13th, 2023 7:16 p.m. 
 ###### Hitting a mental block with the portfolio project and am not sure where to jump back into the workflow. I think that I'm going to focus on the project information first before coming back to the page contents. 
 
----
+##### Update Sept. 17th, 2023 9:11 p.m.
+###### Made some good progress breaking through my mental block on my portfolio and making some strides with the responsive mobile version of my site. Some mocks are included below. 
+
+
 
 ## Stack 
 #### SvelteKit for framework 
