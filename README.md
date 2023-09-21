@@ -17,6 +17,9 @@
 ##### Update Sept. 17th, 2023 9:11 p.m.
 ###### Made some good progress breaking through my mental block on my portfolio and making some strides with the responsive mobile version of my site. Still have to polish a few things around the edges but I'm feeling a lot better moving forward, and hope to have some project pages done soon, after I can put the proverbial pin in the homepage. 
 
+##### Update Sept. 20th, 2023 9:11 p.m.
+###### Finished off a basic template page for project pages! Homepage is just about done, just a few additional touches for mobile, which I will most likely tackle this weekend. Next steps after that will most likely be to create the project pages with content, and then a /work page with all the projects as a gallery. I want to actually go ahead and set a deadline for myself on the first release of my official portfolio. I want to have the project deployed before the end of October. I'm hoping sooner than later, but after getting over the initial hump and mental block, I can feel the full development cycle begin to chug along. 
+
 ## Stack 
 #### SvelteKit for framework 
 #### Netlify for deployment
