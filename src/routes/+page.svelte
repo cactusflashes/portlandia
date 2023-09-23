@@ -102,6 +102,10 @@
         
     }
 
+    function doodleBot(){
+        window.location.href="/doodlebot";
+    }
+
 </script>
 
 
@@ -224,7 +228,9 @@
             <!--four-->
         <div class="projects-container-2">
 
-            <div class="project-4" bind:this={projectFour}>
+            <!-- svelte-ignore a11y-click-events-have-key-events -->
+            <!-- svelte-ignore a11y-no-static-element-interactions -->
+            <div class="project-4" bind:this={projectFour} on:click={doodleBot}>
                 <h7 style="margin-left: 13.2vw; margin-top: 2vw;">Powered by ai</h7>
                 <h6 style="margin-left: 13vw;">DoodleBot</h6>
 
