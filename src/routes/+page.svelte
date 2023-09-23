@@ -103,7 +103,10 @@
     }
 
     function doodleBot(){
+        visible = false; 
+        setTimeout(function(){
         window.location.href="/doodlebot";
+        }, 600); 
     }
 
 </script>
