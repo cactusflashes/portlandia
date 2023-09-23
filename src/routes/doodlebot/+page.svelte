@@ -41,7 +41,7 @@ function backBtn() {
             Chat GPT-3.5 Turbo Model.</a>
             The original version of DoodleBot used the Math.random() method to generate a silly and outlandish sentence based off
             an array of verbs, nouns, adjectives, and other goofy parameters. As funny as the first iteration of Doodlebot was, it was
-            understandable predictable, and got stale pretty quick.
+            understandably predictable, and got stale pretty quick.
         </p>
 
         <p class="body-text">
@@ -55,7 +55,7 @@ function backBtn() {
         <img src={doodTwo} alt="placeholder" class="template-img"/>
 
         <p class="body-text">
-            Using the API is extremely easy; once the OpenAI packages have been installed and imported, we can specify which
+            Using the API is extremely easy; once the OpenAI packages have been installed and imported, I'm able to specify which
             model we'd like to query, and then create a query. Here I've condensed my actual query for a proof of concept, but
             you can imagine this process is not dissimilar to asking GPT a question in any other context. 
         </p>
