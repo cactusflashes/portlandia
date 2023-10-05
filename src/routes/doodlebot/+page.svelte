@@ -6,19 +6,41 @@
 
 
 <script>
+import { fly } from 'svelte/transition';
+import { cubicInOut } from 'svelte/easing';
+
 import doodOne from '/src/lib/dood-1.png';
 import doodTwo from '/src/lib/dood-2.png';
 import doodThree from '/src/lib/dood-3.jpg';
 import doodFour from '/src/lib/dood-4.jpg';
 
+let visible = false; 
+
+function animate(){
+    setTimeout(function(){
+        visible = true; 
+
+    }, 100); 
+}
+
+animate();
+
 function backBtn() {
-    window.history.go(-1); return false; 
+    visible = false; 
+
+    setTimeout(function(){
+        window.history.go(-1); return false; 
+
+    }, 100); 
+
 }
 </script>
 
 
 <body>
-    <div class="container">
+
+    {#if visible === true}
+    <div class="container" transition:fly={{y: -50, duration: 500, easing: cubicInOut}}>
 
         <!-- svelte-ignore a11y-click-events-have-key-events -->
         <!-- svelte-ignore a11y-no-static-element-interactions -->
@@ -41,7 +63,7 @@ function backBtn() {
             Chat GPT-3.5 Turbo Model.</a>
             The original version of DoodleBot used the Math.random() method to generate a silly and outlandish sentence based off
             an array of verbs, nouns, adjectives, and other goofy parameters. As funny as the first iteration of Doodlebot was, it was
-            understandably predictable, and got stale pretty quick.
+            understandable predictable, and got stale pretty quick.
         </p>
 
         <p class="body-text">
@@ -55,7 +77,7 @@ function backBtn() {
         <img src={doodTwo} alt="placeholder" class="template-img"/>
 
         <p class="body-text">
-            Using the API is extremely easy; once the OpenAI packages have been installed and imported, I'm able to specify which
+            Using the API is extremely easy; once the OpenAI packages have been installed and imported, we can specify which
             model we'd like to query, and then create a query. Here I've condensed my actual query for a proof of concept, but
             you can imagine this process is not dissimilar to asking GPT a question in any other context. 
         </p>
@@ -72,4 +94,5 @@ function backBtn() {
         </p>
 
     </div>
+    {/if}
 </body>
