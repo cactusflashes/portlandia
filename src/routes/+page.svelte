@@ -1,4 +1,5 @@
 <title>Joseph S. | Home </title>
+
 <style>
 @import url(styles/home.css);
 @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap');
@@ -8,7 +9,6 @@
     import { cubicInOut } from 'svelte/easing';
     import { fly } from 'svelte/transition';
     import { AnimatedHeadline } from 'svelte-animated-headline';
-    import Switch from './switch.svelte';
 
     import pfp from '$lib/pfp.png';
     import darkpfp from '$lib/pfp-dark.png';
@@ -26,7 +26,6 @@
     let pfpDark = false;
 
     //hacky dark mode vars 
-    let counter = 0;
     let container;
     let workColumn; 
     let navWrapper;
@@ -42,57 +41,10 @@
     function animateIn(){
         setTimeout(function(){
             visible = true;
-        }, 650);
+        }, 100);
     }
     
     animateIn();
-
-    //if anyone sees this, I understand how ugly this dark mode func is. I dug a hole and just kept-a-diggin. Mind ya beezwax.
-    function darkMode(){
-
-        counter ++; 
-
-        if (counter === 1) {
-            //body, containers, etc to dark
-            container.classList.add('container-dark');
-            workColumn.classList.add('work-column-dark');
-            navWrapper.classList.add('nav-wrapper-dark');
-            footer.classList.add('footer-page-dark');
-
-            //project containers to dark
-            projectOne.classList.add('project-1-dark');
-            projectTwo.classList.add('project-2-dark');
-            projectThree.classList.add('project-3-dark');
-            projectFour.classList.add('project-4-dark');
-            projectFive.classList.add('project-5-dark');
-            viewAll.classList.add('view-all-dark');
-
-            //change dynamic profile photo
-            pfpLight = false;
-            pfpDark = true;
-
-        } else if (counter === 2) {
-            //body, containers, etc to dark
-            container.classList.remove('container-dark');
-            workColumn.classList.remove('work-column-dark')
-            navWrapper.classList.remove('nav-wrapper-dark');
-            footer.classList.remove('footer-page-dark');
-
-            //project containers to dark
-            projectOne.classList.remove('project-1-dark');
-            projectTwo.classList.remove('project-2-dark');
-            projectThree.classList.remove('project-3-dark');
-            projectFour.classList.remove('project-4-dark');
-            projectFive.classList.remove('project-5-dark');
-            viewAll.classList.remove('view-all-dark');
-
-            //reset dynamic profile photo
-            pfpDark = false;
-            pfpLight = true;
-
-            counter = 0;
-        }
-    }
 
     function viewWork() {
         visible = false;
@@ -101,7 +53,7 @@
         }, 600);
         
     }
-
+    
     function doodleBot(){
         visible = false; 
         setTimeout(function(){
@@ -128,17 +80,12 @@
                 <li>cv</li>
             </ul>
 
-            <!--dark mode toggle, svelte switch-->
-            <div class="switch-wrapper">
-                <h4 style="margin-bottom: .5vw;">☀️</h4><Switch on:change={darkMode}></Switch><h4 style="margin-bottom: .5vw;">🌙</h4>
-            </div>
-
         </div>
 
         <!--mid body content-->
         <div class="header-container">
 
-            <h1> Hi, I'm Joseph.</h1>
+            <h1>Hello, I'm Joseph.</h1>
 
             <!--animated headline-->
             <h2 class="ani-text-2">
@@ -150,7 +97,6 @@
                 "Front-End Engineer", 
                 "UI/UX Designer",
                 "UX Engineer",
-                "Svelte Fan",
                 "Motion Designer", 
                 "Visual Designer", 
                 "Marketing Analyst", 
@@ -158,7 +104,7 @@
                 ]} 
                 wait={400}> <!--wait 400ms? seems way slower than ms though. 400 units seems okay for now. maybe a little fast.-->
                 </AnimatedHeadline>
-                &nbspworking remotely from&nbsp<h2 style="font-weight: 800; color: #e8ae47;">sunny</h2>&nbspAZ.
+                &nbspworking remotely from&nbsp<h2 style="font-weight: 600; color: #e8ae47;">sunny</h2>&nbspAZ.
             </h2>
 
             <h2 class="failover-text">
@@ -177,15 +123,46 @@
             {/if}
         </div>
 
-        <!--recent projects-->
-        <!--top row-->
+        <!--recent projects--> 
+
+        <div class="projects-container-2">
+
+            <!-- svelte-ignore a11y-click-events-have-key-events -->
+            <!-- svelte-ignore a11y-no-static-element-interactions -->
+            <div class="project-4" bind:this={projectFour} on:click={doodleBot}>
+                <div class="p-txt-con">
+                <h7>Powered by ai</h7>
+                <h6>DoodleBot</h6>
+            </div>
+
+                    <div class="content"> <!--holds the content for the CSS hover transitions-->
+                        <!-- svelte-ignore a11y-missing-attribute -->
+                        <img src={wallet} class="wallet" />
+                    </div>
+
+            </div>
+            
+            <div class="project-5" bind:this={projectFive}>
+                <div class="p-txt-con">
+                <h7>northern arizona university</h7>
+                <h6>Google Storage Quota</h6>
+                </div>
+
+                    <div class="content"> <!--holds the content for the CSS hover transitions-->
+                        <!-- svelte-ignore a11y-missing-attribute -->
+                        <img src={googie} class="googie"/>
+                    </div>
+            </div>
+        </div>
+
         <div class="projects-container">
 
-            <!--one-->
             <!-- svelte-ignore a11y-missing-attribute -->
             <div class="project-1" bind:this={projectOne}>
-                <h7 style="margin-left: 15vw; margin-top: 2vw;">freelance</h7>
-                <h6 style="margin-left: 14vw;">Ascento</h6>
+                <div class="p-txt-con">
+                <h7>freelance</h7>
+                <h6>Ascento</h6>
+                </div>
 
                 <!-- svelte-ignore a11y-media-has-caption -->
                     <div class="content"> <!--holds the content for the CSS hover transitions-->
@@ -194,11 +171,11 @@
 
             </div>
 
-
-            <!--two-->
             <div class="project-2" bind:this={projectTwo}>
-                <h7 style="margin-left: 19vw; margin-top: 2vw;">nasa</h7>
-                <h6 style="margin-left: 10vw;">Artemis RATS</h6>
+                <div class="p-txt-con">
+                <h7>nasa</h7>
+                <h6>Artemis RATS</h6>
+                </div>
 
                     <div class="content"> <!--holds the content for the CSS hover transitions-->
                     <!-- svelte-ignore a11y-missing-attribute -->
@@ -209,11 +186,11 @@
 
             </div>
 
-
-            <!--three-->
             <div class="project-3" bind:this={projectThree}>
-                <h7 style="margin-left: 13vw; margin-top: 2vw;">exploratory</h7>
-                <h6 style="margin-left: 7vw;">Felix Temporem</h6>
+                <div class="p-txt-con">
+                <h7>exploratory</h7>
+                <h6>Felix Temporem</h6>
+                </div>
 
                     <!-- svelte-ignore a11y-media-has-caption -->
                     <div class="content"> <!--holds the content for the CSS hover transitions-->
@@ -226,34 +203,6 @@
 
         </div>
 
-
-        <!--bottom row-->
-            <!--four-->
-        <div class="projects-container-2">
-
-            <!-- svelte-ignore a11y-click-events-have-key-events -->
-            <!-- svelte-ignore a11y-no-static-element-interactions -->
-            <div class="project-4" bind:this={projectFour} on:click={doodleBot}>
-                <h7 style="margin-left: 13.2vw; margin-top: 2vw;">Powered by ai</h7>
-                <h6 style="margin-left: 13vw;">DoodleBot</h6>
-
-                    <div class="content"> <!--holds the content for the CSS hover transitions-->
-                        <!-- svelte-ignore a11y-missing-attribute -->
-                        <img src={wallet} class="wallet" />
-                    </div>
-
-            </div>
-            <!--long five-->
-            <div class="project-5" bind:this={projectFive}>
-                <h7 style="margin-left: 28vw; margin-top: 2vw;">northern arizona university</h7>
-                <h6 style="margin-left: 27vw;">Google Storage Quota</h6>
-
-                    <div class="content"> <!--holds the content for the CSS hover transitions-->
-                        <!-- svelte-ignore a11y-missing-attribute -->
-                        <img src={googie} class="googie"/>
-                    </div>
-            </div>
-        </div>
         <!--view all work button-->
 
         <button class="view-all" bind:this={viewAll} on:click={viewWork}>view more of my work →</button>
