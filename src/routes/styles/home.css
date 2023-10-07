@@ -132,7 +132,8 @@ h6 {
 
 .nav-wrapper {
     background-color: rgba(255, 255, 255, .5);
-    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);    
     height: 60px;
     width: 100vw; 
     display: flex;
@@ -145,13 +146,18 @@ h6 {
     margin: 0;
 }
 
+a {
+    list-style: none;
+    text-decoration: underline;
+    color: grey; 
+}
+
 ul {
     list-style: none;
     display: flex;
     flex-direction: row;
     gap: 1vw;
-    justify-content: right;
-    position: relative;
+    padding: 0;
 }
 
 li {
@@ -304,7 +310,7 @@ li:hover {
     font-size: 1.2rem;
     font-weight: 400; 
     font-family: -apple-system, BlinkMacSystemFont, helvetica, sans-serif;
-    border-radius: 1vw;
+    border-radius: 20px;
     transition: background-color 0.5s, color 0.3s, margin-right 0.5s;
 }
 
@@ -318,7 +324,6 @@ li:hover {
     font-size: 1.2rem;
     font-weight: 400;     
     font-family: -apple-system, BlinkMacSystemFont, helvetica, sans-serif;
-    border-radius: 1vw;
     margin-right: -4vw;
     transition: background-color 0.5s, color 0.3s, margin-right 0.5s;
     cursor: pointer;
@@ -327,6 +332,7 @@ li:hover {
 
 .up-to {
     display: flex;
+    font-size: 3.5rem;
 }
 
 /* Work Column */
@@ -338,7 +344,7 @@ li:hover {
     height: 100%;
     width: 80%;
     max-width: 80%;
-    border-radius: 2vw;
+    border-radius: 40px;
     flex-direction: column; 
     transition: background-color 0.2s, color 0.3s;
 }
@@ -388,8 +394,149 @@ li:hover {
 }
 
 
-a {
-    list-style: none;
-    text-decoration: underline;
-    color: grey; 
+
+
+
+
+/*Med screen queries*/
+
+@media all and (max-width: 1024px) {
+
+    .projects-container-2, .projects-container {
+        flex-direction: column;
+    }
+
+    .project-4, .project-4:hover {
+        width: 100%;
+    }
+
+    .project-5, .project-5:hover {
+        width: 100%;
+    }
+
+    .nav-wrapper {
+        gap: 40vw; 
+    }
+
+    .footer-page {
+        gap: 30vw; 
+    }
+
+}
+
+
+
+
+/*Small screen queries*/
+
+
+@media all and (max-width: 670px) {
+
+    /*text elements*/
+
+    h1 {
+        font-size: 2.6rem;
+    }
+
+    h4 {
+        font-size: 1.2rem;
+    }
+
+    h5 {
+        font-size: 1rem;
+    }
+
+    h6 {
+        font-size: 1.5rem;
+    }
+
+    .h7 {
+        font-size: .7rem;
+    }
+
+    .up-to {
+        font-size: 2rem;
+    }
+
+
+
+
+
+    .nav-wrapper {
+        align-items: center;
+        justify-content: center;
+        background-color: rgba(255, 255, 255, .5);
+        -webkit-backdrop-filter: blur(10px);
+        backdrop-filter: blur(10px);
+    }
+
+    .logo-title {
+        display: none; 
+    }
+
+    ul {
+        gap: 8vw;  
+        justify-content: center;
+        padding: 0;
+        margin: 0; 
+    }
+
+    li {
+        font-weight: 400;
+    }
+
+
+
+
+    .ani-text-2 {
+        display: none; 
+    }
+
+    .failover-text {
+        display: flex; 
+        font-size: 1.2rem;
+        max-width: 90%;
+        text-align: center;
+    }
+
+
+
+    .projects-container, .projects-container-2 {
+        align-items: center;
+        justify-content: center;
+        gap: 2.5vh; 
+
+    }
+
+    .project-4, .project-4:hover {
+        width: 100%;
+        min-width: 0px;
+    }
+
+    .project-5, .project-5:hover {
+        width: 100%;
+        min-width: 0px;
+    }
+
+
+
+
+    .body-wrap-2 {
+        height: 2.5vh;
+    }
+
+
+
+
+    .footer-page {
+        height: 350px; 
+        flex-direction: column;
+        gap: 20px; 
+    }
+
+    .footer-li-container, .footer-li-container-2 {
+        align-items: center;
+    }
+
+
 }
