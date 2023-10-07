@@ -18,10 +18,11 @@
     import felixVideo from '$lib/felix-3.mp4';
     import googie from '$lib/googie.png';
     import wallet from '$lib/walletclip.jpg';
+    import doodle from '$lib/db.svg';
 
 
     //conditional animations and images, etc.
-    let visible = false; //keep true for testing. publish with false to delay page load and animate in.
+    let visible = true; //keep true for testing. publish with false to delay page load and animate in.
     let pfpLight = true;
     let pfpDark = false;
 
@@ -82,6 +83,10 @@
 
         </div>
 
+        <div class="body-wrap-1"></div>
+        <div class="body-wrap-2"></div>
+
+
         <!--mid body content-->
         <div class="header-container">
 
@@ -100,7 +105,6 @@
                 "Motion Designer", 
                 "Visual Designer", 
                 "Marketing Analyst", 
-                "Communications Specialist"
                 ]} 
                 wait={400}> <!--wait 400ms? seems way slower than ms though. 400 units seems okay for now. maybe a little fast.-->
                 </AnimatedHeadline>
@@ -112,18 +116,15 @@
             </h2>
 
         </div>
-    
-        <!--dynamic profile photo-->
-        <div class="pfp-image">
-            {#if pfpLight}
-            <img alt="profile" src={pfp}/>
-            {/if}
-            {#if pfpDark}
-            <img alt="profile" src={darkpfp}/>
-            {/if}
-        </div>
 
-        <!--recent projects--> 
+
+
+
+
+        <div class="body-wrap-1"></div>
+    
+
+
 
         <div class="projects-container-2">
 
@@ -131,70 +132,57 @@
             <!-- svelte-ignore a11y-no-static-element-interactions -->
             <div class="project-4" bind:this={projectFour} on:click={doodleBot}>
                 <div class="p-txt-con">
-                <h7>Powered by ai</h7>
+                <p class="h7">Powered by ai</p>
                 <h6>DoodleBot</h6>
             </div>
 
                     <div class="content"> <!--holds the content for the CSS hover transitions-->
                         <!-- svelte-ignore a11y-missing-attribute -->
-                        <img src={wallet} class="wallet" />
                     </div>
 
             </div>
             
             <div class="project-5" bind:this={projectFive}>
                 <div class="p-txt-con">
-                <h7>northern arizona university</h7>
+                <p class="h7">nau information technology</p>
                 <h6>Google Storage Quota</h6>
                 </div>
 
                     <div class="content"> <!--holds the content for the CSS hover transitions-->
                         <!-- svelte-ignore a11y-missing-attribute -->
-                        <img src={googie} class="googie"/>
+                        <!--img src={googie} class="googie"/-->
                     </div>
             </div>
         </div>
 
+
+        <div class="body-wrap-2"></div>
+
+
         <div class="projects-container">
 
             <!-- svelte-ignore a11y-missing-attribute -->
-            <div class="project-1" bind:this={projectOne}>
+            <div class="project-5" bind:this={projectTwo}>
                 <div class="p-txt-con">
-                <h7>freelance</h7>
-                <h6>Ascento</h6>
-                </div>
-
-                <!-- svelte-ignore a11y-media-has-caption -->
-                    <div class="content"> <!--holds the content for the CSS hover transitions-->
-                        <img src={aThree} class="a-3"/>
-                    </div>
-
-            </div>
-
-            <div class="project-2" bind:this={projectTwo}>
-                <div class="p-txt-con">
-                <h7>nasa</h7>
+                <p class="h7">nasa</p>
                 <h6>Artemis RATS</h6>
                 </div>
 
                     <div class="content"> <!--holds the content for the CSS hover transitions-->
                     <!-- svelte-ignore a11y-missing-attribute -->
-                    <img src={nasaFour} class="nasa-4"/>
                     <!-- svelte-ignore a11y-missing-attribute -->
-                    <img src={nasaThree} class="nasa-3" /> 
                 </div>
 
             </div>
 
-            <div class="project-3" bind:this={projectThree}>
+            <div class="project-4" bind:this={projectThree}>
                 <div class="p-txt-con">
-                <h7>exploratory</h7>
+                <p class="h7">exploratory</p>
                 <h6>Felix Temporem</h6>
                 </div>
 
                     <!-- svelte-ignore a11y-media-has-caption -->
                     <div class="content"> <!--holds the content for the CSS hover transitions-->
-                        <video src={felixVideo} autoplay loop type="video/mp4" class="felix-video"/>
                     </div> 
 
             </div>
@@ -203,12 +191,25 @@
 
         </div>
 
+
+        <div class="body-wrap-1"></div>
+
+
         <!--view all work button-->
 
         <button class="view-all" bind:this={viewAll} on:click={viewWork}>view more of my work →</button>
 
+
+        <div class="body-wrap-1"></div>
+
+
         <!--what I've been up to header-->
-        <h1 style="margin-bottom: 5vw; margin-top: 5vw; font-size: 3vw;" class="up-to">What I've been up to</h1>
+        <h1 style="font-size: 3.5rem;" class="up-to">What I've been up to</h1>
+
+
+        <div class="body-wrap-2"></div>
+
+
 
         <!--work listings and timeline-->
         <div class="work-column" bind:this={workColumn}>
@@ -217,7 +218,7 @@
                 <div class="blurb-container">
 
                     <h4>Communications Analyst</h4>
-                    <h5>Northern Arizona University</h5>
+                    <h5 style="color: grey">Northern Arizona University</h5>
                     <h5>
                         I wear a plethora of hats in my work at NAU. From 
                         web design & front end development, to email communications and visual design 
@@ -228,7 +229,7 @@
                     </h5>
                     &nbsp
                     <h4>Freelance Web Developer</h4>
-                    <h5>Web Design & Development</h5>
+                    <h5 style="color: grey">Web Design & Development</h5>
                     <h5>
                         Web design and front-end development, branding and
                         marketing material creation, physical merchandise
@@ -239,7 +240,7 @@
                     &nbsp
 
                     <h4>Visual Communications Assistant</h4>
-                    <h5>NAU Information Technology Services</h5>
+                    <h5 style="color: grey">NAU Information Technology Services</h5>
                     <h5>
                         Graphic design and motion design for social media,
                         web, and email marketing. On-site photo and
@@ -250,7 +251,7 @@
                     &nbsp
 
                     <h4>Visual Designer</h4>
-                    <h5>SVE Cheerleading</h5>
+                    <h5 style="color: grey">SVE Cheerleading</h5>
                     <h5>
                         Graphic design for social media, web, and print
                         merchandise. Creation of branding materials both
@@ -263,14 +264,37 @@
             </div>
         </div>
 
+
+
+
+<div class="body-wrap-1"></div>
+
+
+
+
         <!--footer-->
         <div class="footer-page" bind:this={footer}>
+
+            
             <div class="footer-li-container">
-            <h4>Built with 💛 using</h4>
-            <h2><strong>SvelteKit</strong>&nbspfor Code</h2>
-            <h2><strong>Github</strong>&nbspfor Versions</h2>
-            <h2><strong>Netlify</strong>&nbspfor Launch</h2>
-        </div>
+                <h3 class="footer-text-no-margin">Built with 💛 using</h3>
+                <h3 class="footer-text-no-margin" style="color: grey"><strong><a href="https://kit.svelte.dev/">SvelteKit↗</a></strong>&nbspfor Code</h3>
+                <h3 class="footer-text-no-margin" style="color: grey"><strong><a href="https://kit.svelte.dev/">Github↗</a></strong>&nbspfor Versions</h3>
+                <h3 class="footer-text-no-margin" style="color: grey"><strong><a href="https://kit.svelte.dev/">Netlify↗</a></strong>&nbspfor Launch</h3>
+                &nbsp
+                <h3 class="footer-text-no-margin" style="color: grey"><strong><a href="https://kit.svelte.dev/">Check out how I built this site!</a></h3>
+            </div>
+
+
+            <div class="footer-li-container-2">
+                <h3 class="footer-text-no-margin">Find me elsewhere</h3>
+                <h3 class="footer-text-no-margin" style="color: grey"><strong><a href="https://kit.svelte.dev/">read.cv↗</a></strong></h3>
+                <h3 class="footer-text-no-margin" style="color: grey"><strong><a href="https://kit.svelte.dev/">Github↗</a></strong></h3>
+                <h3 class="footer-text-no-margin" style="color: grey"><strong><a href="https://kit.svelte.dev/">Email↗</a></strong></h3>
+                &nbsp
+            </div>
+
+
         </div>
 
     </div>
