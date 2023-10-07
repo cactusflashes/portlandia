@@ -73,7 +73,7 @@
         <!--nav and links-->
         <div class="nav-wrapper" bind:this={navWrapper}>
 
-            <h3>Joseph S. | 2023</h3>
+            <h3 class="logo-title">Joseph S. | 2023</h3>
 
             <ul>
                 <li>work</li>
@@ -204,7 +204,7 @@
 
 
         <!--what I've been up to header-->
-        <h1 style="font-size: 3.5rem;" class="up-to">What I've been up to</h1>
+        <h1 class="up-to">What I've been up to</h1>
 
 
         <div class="body-wrap-2"></div>
@@ -216,9 +216,9 @@
             <div class="work-text-container">
 
                 <div class="blurb-container">
-
                     <h4>Communications Analyst</h4>
-                    <h5 style="color: grey">Northern Arizona University</h5>
+                    <h5 style="color: grey">Northern Arizona University | 22 - Present</h5>
+
                     <h5>
                         I wear a plethora of hats in my work at NAU. From 
                         web design & front end development, to email communications and visual design 
@@ -229,7 +229,7 @@
                     </h5>
                     &nbsp
                     <h4>Freelance Web Developer</h4>
-                    <h5 style="color: grey">Web Design & Development</h5>
+                    <h5 style="color: grey">Design & Development | 18 - Present</h5>
                     <h5>
                         Web design and front-end development, branding and
                         marketing material creation, physical merchandise
@@ -240,7 +240,7 @@
                     &nbsp
 
                     <h4>Visual Communications Assistant</h4>
-                    <h5 style="color: grey">NAU Information Technology Services</h5>
+                    <h5 style="color: grey">NAU Information Technology Services | 21 - 22</h5>
                     <h5>
                         Graphic design and motion design for social media,
                         web, and email marketing. On-site photo and
@@ -251,7 +251,7 @@
                     &nbsp
 
                     <h4>Visual Designer</h4>
-                    <h5 style="color: grey">SVE Cheerleading</h5>
+                    <h5 style="color: grey">SVE Cheerleading | 17 - 20</h5>
                     <h5>
                         Graphic design for social media, web, and print
                         merchandise. Creation of branding materials both
@@ -279,8 +279,8 @@
             <div class="footer-li-container">
                 <h3 class="footer-text-no-margin">Built with 💛 using</h3>
                 <h3 class="footer-text-no-margin" style="color: grey"><strong><a href="https://kit.svelte.dev/">SvelteKit↗</a></strong>&nbspfor Code</h3>
-                <h3 class="footer-text-no-margin" style="color: grey"><strong><a href="https://kit.svelte.dev/">Github↗</a></strong>&nbspfor Versions</h3>
-                <h3 class="footer-text-no-margin" style="color: grey"><strong><a href="https://kit.svelte.dev/">Netlify↗</a></strong>&nbspfor Launch</h3>
+                <h3 class="footer-text-no-margin" style="color: grey"><strong><a href="https://github.com">Github↗</a></strong>&nbspfor Versions</h3>
+                <h3 class="footer-text-no-margin" style="color: grey"><strong><a href="https://netlify.com">Netlify↗</a></strong>&nbspfor Launch</h3>
                 &nbsp
                 <h3 class="footer-text-no-margin" style="color: grey"><strong><a href="https://kit.svelte.dev/">Check out how I built this site!</a></h3>
             </div>
@@ -288,9 +288,9 @@
 
             <div class="footer-li-container-2">
                 <h3 class="footer-text-no-margin">Find me elsewhere</h3>
-                <h3 class="footer-text-no-margin" style="color: grey"><strong><a href="https://kit.svelte.dev/">read.cv↗</a></strong></h3>
-                <h3 class="footer-text-no-margin" style="color: grey"><strong><a href="https://kit.svelte.dev/">Github↗</a></strong></h3>
-                <h3 class="footer-text-no-margin" style="color: grey"><strong><a href="https://kit.svelte.dev/">Email↗</a></strong></h3>
+                <h3 class="footer-text-no-margin" style="color: grey"><strong><a href="https://read.cv/cacti">read.cv↗</a></strong></h3>
+                <h3 class="footer-text-no-margin" style="color: grey"><strong><a href="https://github.com/cactusflashes">Github↗</a></strong></h3>
+                <h3 class="footer-text-no-margin" style="color: grey"><strong><a href="mailto:airefrescodesign@gmail.com">Email↗</a></strong></h3>
                 &nbsp
             </div>
 
