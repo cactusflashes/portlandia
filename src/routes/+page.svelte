@@ -15,7 +15,7 @@
     import resume from '/src/lib/Resume - Joseph Salmon.pdf'; 
 
 
-    let visible = true; //keep true for testing. publish with false to delay page load and animate in.
+    let visible = false; //keep true for testing. publish with false to delay page load and animate in.
 
 
   
