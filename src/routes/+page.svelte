@@ -10,35 +10,15 @@
     import { fly } from 'svelte/transition';
     import { AnimatedHeadline } from 'svelte-animated-headline';
 
-    import pfp from '$lib/pfp.png';
-    import darkpfp from '$lib/pfp-dark.png';
-    import nasaFour from '$lib/nasa-4.jpg';
-    import nasaThree from '$lib/nasa-3.jpg';
-    import aThree from '$lib/a-3.png';
-    import felixVideo from '$lib/felix-3.mp4';
     import googie from '$lib/googie.png';
-    import wallet from '$lib/walletclip.jpg';
-    import doodle from '$lib/db.svg';
+    import nasa from '$lib/art-1.jpg';
+    import resume from '/src/lib/Resume - Joseph Salmon.pdf'; 
 
 
-    //conditional animations and images, etc.
     let visible = true; //keep true for testing. publish with false to delay page load and animate in.
-    let pfpLight = true;
-    let pfpDark = false;
 
-    //hacky dark mode vars 
-    let container;
-    let workColumn; 
-    let navWrapper;
-    let footer;
 
-    let projectOne;
-    let projectTwo;
-    let projectThree;
-    let projectFour;
-    let projectFive;
-    let viewAll; 
-
+  
     function animateIn(){
         setTimeout(function(){
             visible = true;
@@ -62,6 +42,18 @@
         }, 600); 
     }
 
+    function aboutNav(){
+        visible = false; 
+        setTimeout(function(){
+            window.location.href ="/about"; 
+        }, 500); 
+    }
+
+
+    function openRes(){
+        window.open(resume); 
+    }
+
 </script>
 
 
@@ -69,16 +61,16 @@
 
     {#if visible}
 
-    <div class="container" transition:fly={{y: -30, duration: 500, easing: cubicInOut}} bind:this={container}>
+    <div class="container" transition:fly={{y: -30, duration: 500, easing: cubicInOut}}>
         <!--nav and links-->
-        <div class="nav-wrapper" bind:this={navWrapper}>
+        <div class="nav-wrapper">
 
             <h3 class="logo-title">Joseph S. | 2023</h3>
 
             <ul>
                 <li>work</li>
-                <li>about</li>
-                <li>cv</li>
+                <li on:click={aboutNav}>about</li>
+                <li on:click={openRes}>cv</li>
             </ul>
 
         </div>
@@ -101,18 +93,17 @@
                 "Web Developer", 
                 "Front-End Engineer", 
                 "UI/UX Designer",
-                "UX Engineer",
                 "Motion Designer", 
                 "Visual Designer", 
                 "Marketing Analyst", 
                 ]} 
                 wait={400}> <!--wait 400ms? seems way slower than ms though. 400 units seems okay for now. maybe a little fast.-->
                 </AnimatedHeadline>
-                &nbspworking remotely from&nbsp<h2 style="font-weight: 600; color: #e8ae47;">sunny</h2>&nbspAZ.
+                &nbspworking remotely from&nbsp<h2 style="font-weight: 600; color: #e8ae47;">sunny</h2>&nbsp Arizona.
             </h2>
 
             <h2 class="failover-text">
-                I'm a Front-End Engineer based out of sunny AZ. 
+                I'm a Front-End Engineer working remotely from sunny Arizona. 
             </h2>
 
         </div>
@@ -130,7 +121,7 @@
 
             <!-- svelte-ignore a11y-click-events-have-key-events -->
             <!-- svelte-ignore a11y-no-static-element-interactions -->
-            <div class="project-4" bind:this={projectFour} on:click={doodleBot}>
+            <div class="project-4" on:click={doodleBot}>
                 <div class="p-txt-con">
                 <p class="h7">Powered by ai</p>
                 <h6>DoodleBot</h6>
@@ -142,7 +133,7 @@
 
             </div>
             
-            <div class="project-5" bind:this={projectFive}>
+            <div class="project-5" >
                 <div class="p-txt-con">
                 <p class="h7">nau information technology</p>
                 <h6>Google Storage Quota</h6>
@@ -162,7 +153,7 @@
         <div class="projects-container">
 
             <!-- svelte-ignore a11y-missing-attribute -->
-            <div class="project-5" bind:this={projectTwo}>
+            <div class="project-5" >
                 <div class="p-txt-con">
                 <p class="h7">nasa</p>
                 <h6>Artemis RATS</h6>
@@ -171,14 +162,15 @@
                     <div class="content"> <!--holds the content for the CSS hover transitions-->
                     <!-- svelte-ignore a11y-missing-attribute -->
                     <!-- svelte-ignore a11y-missing-attribute -->
+                    <img src={nasa} alt="a nasa space rover" class="nasa">
                 </div>
 
             </div>
 
-            <div class="project-4" bind:this={projectThree}>
+            <div class="project-4" >
                 <div class="p-txt-con">
-                <p class="h7">exploratory</p>
-                <h6>Felix Temporem</h6>
+                <p class="h7">nau its</p>
+                <h6>WordPress</h6>
                 </div>
 
                     <!-- svelte-ignore a11y-media-has-caption -->
@@ -197,7 +189,7 @@
 
         <!--view all work button-->
 
-        <button class="view-all" bind:this={viewAll} on:click={viewWork}>view more of my work →</button>
+        <button class="view-all" on:click={viewWork}>view more of my work →</button>
 
 
         <div class="body-wrap-1"></div>
@@ -212,7 +204,7 @@
 
 
         <!--work listings and timeline-->
-        <div class="work-column" bind:this={workColumn}>
+        <div class="work-column" >
             <div class="work-text-container">
 
                 <div class="blurb-container">
@@ -273,14 +265,14 @@
 
 
         <!--footer-->
-        <div class="footer-page" bind:this={footer}>
+        <div class="footer-page">
 
             
             <div class="footer-li-container">
                 <h3 class="footer-text-no-margin">Built with 💛 using</h3>
-                <h3 class="footer-text-no-margin" style="color: grey"><strong><a href="https://kit.svelte.dev/">SvelteKit↗</a></strong>&nbspfor Code</h3>
-                <h3 class="footer-text-no-margin" style="color: grey"><strong><a href="https://github.com">Github↗</a></strong>&nbspfor Versions</h3>
-                <h3 class="footer-text-no-margin" style="color: grey"><strong><a href="https://netlify.com">Netlify↗</a></strong>&nbspfor Launch</h3>
+                <h3 class="footer-text-no-margin" style="color: grey"><strong><a href="https://kit.svelte.dev/">SvelteKit↗</a></strong>&nbspfor code</h3>
+                <h3 class="footer-text-no-margin" style="color: grey"><strong><a href="https://github.com">Github↗</a></strong>&nbspfor versions</h3>
+                <h3 class="footer-text-no-margin" style="color: grey"><strong><a href="https://netlify.com">Netlify↗</a></strong>&nbspfor launch</h3>
                 &nbsp
                 <h3 class="footer-text-no-margin" style="color: grey"><strong><a href="https://kit.svelte.dev/">Check out how I built this site!</a></h3>
             </div>
