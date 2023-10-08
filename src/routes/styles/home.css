@@ -220,6 +220,7 @@ li:hover {
     transition: margin-top 0.5s;
     display: flex;
     flex-direction: column;
+    align-items: center;
 }
 
 /* Project Four */
@@ -233,7 +234,7 @@ li:hover {
     width: 500px; 
     min-width: 400px;
     transition: background-color 0.5s, color 0.3s, margin-top 0.5s;
-    border: 1px solid #e0e0e0;
+    border: 1px solid #d5d5d5;
     border-radius: 30px;
     flex-direction: column;
     overflow: hidden;
@@ -273,7 +274,7 @@ li:hover {
     border-radius: 30px;
     flex-direction: column;
     overflow: hidden;
-    border: 1px solid #e0e0e0;
+    border: 1px solid #d5d5d5;
 
 }
 
@@ -298,12 +299,19 @@ li:hover {
 
 }
 
+
+
+.nasa {
+    border-radius: 40px;
+    max-width: 80%;
+}
+
 /* View all work button */
 
 .view-all {
     display: flex;
     align-self: center;
-    border: 1px solid #e0e0e0;
+    border: 1px solid #d5d5d5;
     background-color: white;
     color: black;
     padding: 25px 40px;
@@ -485,9 +493,6 @@ li:hover {
         font-weight: 400;
     }
 
-
-
-
     .ani-text-2 {
         display: none; 
     }
@@ -518,14 +523,10 @@ li:hover {
         min-width: 0px;
     }
 
-
-
-
+q
     .body-wrap-2 {
         height: 2.5vh;
     }
-
-
 
 
     .footer-page {
@@ -537,6 +538,9 @@ li:hover {
     .footer-li-container, .footer-li-container-2 {
         align-items: center;
     }
+
+
+
 
 
 }
