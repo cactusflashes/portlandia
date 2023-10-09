@@ -9,15 +9,9 @@
     import { cubicInOut } from 'svelte/easing';
     import { fly } from 'svelte/transition';
     import { AnimatedHeadline } from 'svelte-animated-headline';
-
-    import googie from '$lib/googie.png';
-    import nasa from '$lib/art-1.jpg';
-    import resume from '/src/lib/Resume - Joseph Salmon.pdf'; 
-
+    import resume from '/src/lib/Resume - Joseph Salmon.pdf';
 
     let visible = false; //keep true for testing. publish with false to delay page load and animate in.
-
-
   
     function animateIn(){
         setTimeout(function(){
@@ -34,6 +28,13 @@
         }, 600);
         
     }
+
+    function google() {
+        visible = false;
+        setTimeout(function(){
+            window.location.href="/google"
+        }, 600);
+    }
     
     function doodleBot(){
         visible = false; 
@@ -49,15 +50,26 @@
         }, 500); 
     }
 
+    function artemisRats(){
+        visible = false; 
+        setTimeout(function(){
+            window.location.href ="/artemis"; 
+        }, 500); 
+    }
 
     function openRes(){
         window.open(resume); 
     }
 
+
+
 </script>
 
 
 <body>
+
+                    <!-- svelte-ignore a11y-click-events-have-key-events -->
+                <!-- svelte-ignore a11y-no-noninteractive-element-interactions -->
 
     {#if visible}
 
@@ -68,7 +80,8 @@
             <h3 class="logo-title">Joseph S. | 2023</h3>
 
             <ul>
-                <li>work</li>
+                <li on:click={viewWork}>work</li>
+
                 <li on:click={aboutNav}>about</li>
                 <li on:click={openRes}>cv</li>
             </ul>
@@ -114,36 +127,31 @@
 
         <div class="body-wrap-1"></div>
     
-
+            <!-- svelte-ignore a11y-click-events-have-key-events -->
+            <!-- svelte-ignore a11y-no-static-element-interactions -->
 
 
         <div class="projects-container-2">
 
-            <!-- svelte-ignore a11y-click-events-have-key-events -->
-            <!-- svelte-ignore a11y-no-static-element-interactions -->
-            <div class="project-4" on:click={doodleBot}>
+
+            <div class="doodle-bot" on:click={doodleBot}>
+
                 <div class="p-txt-con">
                 <p class="h7">Powered by ai</p>
                 <h6>DoodleBot</h6>
-            </div>
-
-                    <div class="content"> <!--holds the content for the CSS hover transitions-->
-                        <!-- svelte-ignore a11y-missing-attribute -->
-                    </div>
+                </div>
 
             </div>
             
-            <div class="project-5" >
-                <div class="p-txt-con">
+            <div class="google-storage" on:click={google}>
+
+                <div class="p-txt-con-long">
                 <p class="h7">nau information technology</p>
                 <h6>Google Storage Quota</h6>
                 </div>
 
-                    <div class="content"> <!--holds the content for the CSS hover transitions-->
-                        <!-- svelte-ignore a11y-missing-attribute -->
-                        <!--img src={googie} class="googie"/-->
-                    </div>
             </div>
+
         </div>
 
 
@@ -152,30 +160,21 @@
 
         <div class="projects-container">
 
-            <!-- svelte-ignore a11y-missing-attribute -->
-            <div class="project-5" >
-                <div class="p-txt-con">
+            <div class="nasa" on:click={artemisRats}>
+
+                <div class="p-txt-con-long">
                 <p class="h7">nasa</p>
                 <h6>Artemis RATS</h6>
                 </div>
 
-                    <div class="content"> <!--holds the content for the CSS hover transitions-->
-                    <!-- svelte-ignore a11y-missing-attribute -->
-                    <!-- svelte-ignore a11y-missing-attribute -->
-                    <img src={nasa} alt="a nasa space rover" class="nasa">
-                </div>
-
             </div>
 
-            <div class="project-4" >
+            <div class="wordpress" >
+
                 <div class="p-txt-con">
                 <p class="h7">nau its</p>
                 <h6>WordPress</h6>
                 </div>
-
-                    <!-- svelte-ignore a11y-media-has-caption -->
-                    <div class="content"> <!--holds the content for the CSS hover transitions-->
-                    </div> 
 
             </div>
 
@@ -274,7 +273,7 @@
                 <h3 class="footer-text-no-margin" style="color: grey"><strong><a href="https://github.com">Github↗</a></strong>&nbspfor versions</h3>
                 <h3 class="footer-text-no-margin" style="color: grey"><strong><a href="https://netlify.com">Netlify↗</a></strong>&nbspfor launch</h3>
                 &nbsp
-                <h3 class="footer-text-no-margin" style="color: grey"><strong><a href="https://kit.svelte.dev/">Check out how I built this site!</a></h3>
+                <h3 class="footer-text-no-margin" style="color: grey"><strong><a href="/portfolio">Some thoughts on portfolios</a></h3>
             </div>
 
 
