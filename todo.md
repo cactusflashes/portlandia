@@ -13,6 +13,7 @@ image or pattern for responsive design.
 -------------------------------------------------------
 
 ## Work 
+- make workpage responsive
 
 ### Design 
     - AI Page - ITS 
