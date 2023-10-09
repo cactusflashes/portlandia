@@ -83,7 +83,7 @@
     <div class="body-wrap-1"></div>
 
     <h6>Contact</h6>
-    <h3>airefrescodesign@gmail.com</h3>
+    <h3 style="color: grey">airefrescodesign@gmail.com</h3>
 
     <div class="body-wrap-1"></div>
 

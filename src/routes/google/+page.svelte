@@ -5,13 +5,7 @@
 </style>
 <script>
 
-    import artOne from '/src/lib/art-1.jpg'; 
-    import artTwo from '/src/lib/art-2.jpg';
-    import artThree from '/src/lib/art-3.jpg'; 
-    import artFour from '/src/lib/art-4.jpg'; 
-    import artFive from '/src/lib/art-5.jpg'; 
-    import artSix from '/src/lib/art-6.jpg'; 
-    import artSev from '/src/lib/art-7.jpg';
+    import google from '/src/lib/google-banner.svg'; 
     import { fly } from 'svelte/transition'; 
     import { cubicInOut } from 'svelte/easing';
 
@@ -45,17 +39,17 @@
             <!-- svelte-ignore a11y-click-events-have-key-events -->
             <div class="exit" alt="exit page" on:click={backBtn}>x</div>
     
-            <h1>Artemis RATS</h1>
+            <h1>Google Storage Quota</h1>
     
             <div class="dynamic-row">
     
-                <h2>Digital Media</h2>
-                <h2>NAU</h2>
+                <h2>Communication Design</h2>
+                <h2>ITS</h2>
                 <h2>2022</h2>
     
             </div>
     
-            <img src={artOne} alt="placeholder" class="template-img"/> 
+            <img src={google} alt="placeholder" class="template-img"/> 
 
 
     
@@ -69,8 +63,8 @@
             </p>
 
             <div class="two-pic-row">
-                <img src={artTwo} alt="placeholder" class="template-img"/>
-                <img src={artThree} alt="placeholder" class="template-img"/>
+
+
             </div>
     
             <p class="body-text">
@@ -85,8 +79,8 @@
             </p>
 
             <div class="two-pic-row">
-                <img src={artFour} alt="placeholder" class="template-img"/>
-                <img src={artSev} alt="placeholder" class="template-img"/>
+
+
             </div>
 
             <p class="body-text">
@@ -115,8 +109,8 @@
 
 
             <div class="two-pic-row">
-                <img src={artSix} alt="placeholder" class="template-img"/>
-                <img src={artFive} alt="placeholder" class="template-img"/>
+
+
             </div>
 
             <p class="body-text">

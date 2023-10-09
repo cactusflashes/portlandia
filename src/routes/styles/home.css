@@ -1,5 +1,3 @@
-/* General Containers, etc.*/
-
 body {
     background-color: white;
     margin: 0;
@@ -27,7 +25,6 @@ body {
     max-width: 90%;
     flex-direction: column;
 }
-
 
 .body-wrap-1 {
     display: flex; 
@@ -209,23 +206,69 @@ li:hover {
     display: flex; 
     flex-direction: column;
     align-items: flex-end;
-    margin-right: 30px; 
-    margin-top: 30px; 
+    justify-content: center;
+    background-color: rgba(255, 255, 255, .5);
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);    
+    padding: 8px 20px;
+    border-radius: 15px;
     z-index: 10;
+    margin-top: 4vh;
+    max-width: 40%;
+    margin-right: 8%;
+    position: relative; 
+
 }
 
-
-
-.content {
-    transition: margin-top 0.5s;
-    display: flex;
+.p-txt-con-long {
+    display: flex; 
     flex-direction: column;
-    align-items: center;
+    align-items: flex-end;
+    justify-content: center;
+    background-color: rgba(255, 255, 255, .5);
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);    
+    padding: 8px 20px;
+    border-radius: 15px;
+    z-index: 10;
+    margin-top: 4vh;
+    margin-right: 4%;
+    max-width: 50%;
+    position: relative; 
 }
 
 /* Project Four */
 
-.project-4 {
+.doodle-bot {
+    display: flex;
+    background-image: url('/src/lib/db.svg');
+    background-size: cover; 
+    background-color: white;
+    height: 50vh;
+    min-height: 200px;
+    max-height: 400px;
+    width: 500px; 
+    min-width: 400px;
+    transition: border 0.5s, color 0.3s, margin-top 0.5s;
+    border: 1.5px solid #d5d5d5;
+    border-radius: 30px;
+    flex-direction: column;
+    overflow: hidden;
+    align-items: flex-end;
+
+}
+
+.doodle-bot:hover, .wordpress:hover {
+    display: flex;
+    transition: border 0.5s, color 0.3s, margin-top 0.5s;
+    margin-top: -1vw;
+    cursor: pointer;
+    border: 1.5px solid #e8ae47; 
+
+}
+
+
+.wordpress {
     display: flex;
     background-color: white;
     height: 50vh;
@@ -233,78 +276,62 @@ li:hover {
     max-height: 400px;
     width: 500px; 
     min-width: 400px;
-    transition: background-color 0.5s, color 0.3s, margin-top 0.5s;
-    border: 1px solid #d5d5d5;
+    transition: border 0.5s, color 0.3s, margin-top 0.5s;
+    border: 1.5px solid #d5d5d5;
     border-radius: 30px;
     flex-direction: column;
     overflow: hidden;
-}
-
-.project-4:hover {
-    display: flex;
-    background-color: #e8ae47;
-    height: 50vh;
-    max-height: 400px;
-    width: 500px; 
-    transition: background-color 0.5s, color 0.3s, margin-top 0.5s;
-    margin-top: -1vw;
-    color: black;
-    flex-direction: column;
-    cursor: pointer;
-    overflow: hidden;
-    border: 1px solid #e8ae47; 
+    align-items: flex-end;
 
 }
 
-.project-4:hover .content {
-    margin-top: -2vw;
-}
 
 /* Project Five */
 
-.project-5 {
+.google-storage {
     display: flex;
+    background-image: url('/src/lib/google-banner.svg');
     background-color: white;
+    background-size: cover;
+    align-items: flex-end;
     height: 50vh;
     max-height: 400px;
     min-height: 200px;
     min-width: 400px;
-    transition: background-color 0.5s, color 0.3s, margin-top 0.5s;
+    transition: border 0.5s, margin-top 0.5s; 
     width: 80%;
     border-radius: 30px;
     flex-direction: column;
     overflow: hidden;
-    border: 1px solid #d5d5d5;
-
+    border: 1.5px solid #d5d5d5;
 }
 
-.project-5:hover {
+.nasa {
     display: flex;
-    background-color: #e8ae47;
+    background-image: url('/src/lib/art-1.jpg');
+    background-size: cover;
+    align-items: flex-end;
     height: 50vh;
     max-height: 400px;
     min-height: 200px;
-    transition: background-color 0.5s, color 0.3s, margin-top 0.5s;
+    min-width: 400px;
+    transition: border 0.5s, margin-top 0.5s;
     width: 80%;
+    border-radius: 30px;
+    flex-direction: column;
+    overflow: hidden;
+    border: 1.5px solid #d5d5d5;
+}
+
+.google-storage:hover, .nasa:hover {
+    transition: border 0.5s, margin-top 0.5s;
     margin-top: -1vw;
-    color: black;
     flex-direction: column;
     cursor: pointer;
-    overflow: hidden;
-}
-
-.project-5:hover .content {
-    transition: margin-top 0.5s;
-    margin-top: -1.5vw;
-
+    border: 1.5px solid #e8ae47;
 }
 
 
-
-.nasa {
-    border-radius: 40px;
-    max-width: 80%;
-}
 
 /* View all work button */
 
@@ -319,7 +346,7 @@ li:hover {
     font-weight: 400; 
     font-family: -apple-system, BlinkMacSystemFont, helvetica, sans-serif;
     border-radius: 20px;
-    transition: background-color 0.5s, color 0.3s, margin-right 0.5s;
+    transition: background-color 0.5s, color 0.3s, scale 0.5s;
 }
 
 .view-all:hover {
@@ -332,11 +359,11 @@ li:hover {
     font-size: 1.2rem;
     font-weight: 400;     
     font-family: -apple-system, BlinkMacSystemFont, helvetica, sans-serif;
-    margin-right: -4vw;
-    transition: background-color 0.5s, color 0.3s, margin-right 0.5s;
+    scale: 1.04; 
+    transition: background-color 0.5s, color 0.3s, scale 0.5s;
     cursor: pointer;
-
 }
+
 
 .up-to {
     display: flex;
@@ -418,7 +445,7 @@ li:hover {
         width: 100%;
     }
 
-    .project-5, .project-5:hover {
+    .google-storage, .google-storage:hover, .nasa, .nasa:hover {
         width: 100%;
     }
 
