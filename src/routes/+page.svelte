@@ -281,8 +281,8 @@
                 <h3 class="footer-text-no-margin">Find me elsewhere</h3>
                 <h3 class="footer-text-no-margin" style="color: grey"><strong><a href="https://read.cv/cacti">read.cv↗</a></strong></h3>
                 <h3 class="footer-text-no-margin" style="color: grey"><strong><a href="https://github.com/cactusflashes">Github↗</a></strong></h3>
+                <h3 class="footer-text-no-margin" style="color: grey"><strong><a href="https://connect.mozilla.org/t5/user/viewprofilepage/user-id/41047">Mozilla↗</a></strong></h3>
                 <h3 class="footer-text-no-margin" style="color: grey"><strong><a href="mailto:airefrescodesign@gmail.com">Email↗</a></strong></h3>
-                &nbsp
             </div>
 
 

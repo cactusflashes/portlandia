@@ -229,10 +229,18 @@
 
             <div class="body-wrap-2"></div>
 
-
             <h3 class="subhead">KPI's and Metrics</h3>
 
+            <p class="body-text">
+                During our weekly standup meetings for this project, we were able to compare the results of our digital campaign
+                against the university's pooled storage, and our large storage consumers (which we dubbed whales). 
+            </p>
 
+            <p class="body-text">
+                We were able to observe a decrease in pooled storage that correlated directly with the timing of our
+                campaign, as well as measured ServiceNow requests that correlated with what we were seeing in analytics 
+                for our project page. 
+            </p>
     
         </div>
         {/if}
