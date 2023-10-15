@@ -247,7 +247,7 @@ li:hover {
     height: 50vh;
     min-height: 200px;
     max-height: 400px;
-    width: 500px; 
+    width: 80%; 
     min-width: 400px;
     transition: border 0.5s, color 0.3s, margin-top 0.5s;
     border: 1.5px solid #d5d5d5;
@@ -274,7 +274,7 @@ li:hover {
     height: 50vh;
     min-height: 200px;
     max-height: 400px;
-    width: 500px; 
+    width: 80%; 
     min-width: 400px;
     transition: border 0.5s, color 0.3s, margin-top 0.5s;
     border: 1.5px solid #d5d5d5;
@@ -441,13 +441,13 @@ li:hover {
         flex-direction: column;
     }
 
-    .project-4, .project-4:hover {
+    .doodle-bot, .doodle-bot:hover, .google-storage, 
+    .google-storage:hover, .nasa, .nasa:hover, .wordpress, 
+    .wordpress:hover {
         width: 100%;
+        min-width: 0px;
     }
 
-    .google-storage, .google-storage:hover, .nasa, .nasa:hover {
-        width: 100%;
-    }
 
     .nav-wrapper {
         gap: 40vw; 
@@ -540,19 +540,16 @@ li:hover {
 
     }
 
-    .project-4, .project-4:hover {
+    .doodle-bot, .doodle-bot:hover, .google-storage, 
+    .google-storage:hover, .nasa, .nasa:hover, .wordpress, 
+    .wordpress:hover {
         width: 100%;
         min-width: 0px;
     }
 
-    .project-5, .project-5:hover {
-        width: 100%;
-        min-width: 0px;
-    }
 
-q
     .body-wrap-2 {
-        height: 2.5vh;
+        height: 50px;
     }
 
 

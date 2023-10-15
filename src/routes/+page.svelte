@@ -9,7 +9,7 @@
     import { cubicInOut } from 'svelte/easing';
     import { fly } from 'svelte/transition';
     import { AnimatedHeadline } from 'svelte-animated-headline';
-    import resume from '/src/lib/Resume - Joseph Salmon.pdf';
+    import resume from '/src/lib/Joseph S - Resume.pdf';
 
     let visible = false; //keep true for testing. publish with false to delay page load and animate in.
   
@@ -61,15 +61,25 @@
         window.open(resume); 
     }
 
+    function ai(){
+        visible = false; 
+        setTimeout(function(){
+            window.location.href ="/ai"; 
+        }, 500);     
+    }
+
 
 
 </script>
 
+<!-- svelte-ignore a11y-click-events-have-key-events -->
+<!-- svelte-ignore a11y-no-static-element-interactions -->
+<!-- svelte-ignore a11y-no-noninteractive-element-interactions -->
+
 
 <body>
 
-                    <!-- svelte-ignore a11y-click-events-have-key-events -->
-                <!-- svelte-ignore a11y-no-noninteractive-element-interactions -->
+
 
     {#if visible}
 
@@ -127,21 +137,20 @@
 
         <div class="body-wrap-1"></div>
     
-            <!-- svelte-ignore a11y-click-events-have-key-events -->
-            <!-- svelte-ignore a11y-no-static-element-interactions -->
+
 
 
         <div class="projects-container-2">
 
-
-            <div class="doodle-bot" on:click={doodleBot}>
+            <div class="wordpress" on:click={ai}>
 
                 <div class="p-txt-con">
-                <p class="h7">Powered by ai</p>
-                <h6>DoodleBot</h6>
+                <p class="h7">nau its</p>
+                <h6>AI & NAU</h6>
                 </div>
 
             </div>
+
             
             <div class="google-storage" on:click={google}>
 
@@ -169,14 +178,16 @@
 
             </div>
 
-            <div class="wordpress" >
+            <div class="doodle-bot" on:click={doodleBot}>
 
                 <div class="p-txt-con">
-                <p class="h7">nau its</p>
-                <h6>WordPress</h6>
+                <p class="h7">Powered by ai</p>
+                <h6>DoodleBot</h6>
                 </div>
 
             </div>
+
+
 
 
 
