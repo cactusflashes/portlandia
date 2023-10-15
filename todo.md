@@ -6,7 +6,6 @@
 - Thoughts on Portfolio Page
 - New Icon for Doodlebot 
 - New Icon For Wordpress Page
-- fix new homepage labels responsiveness issue
 
 //it's best for page banners to be a full width 
 image or pattern for responsive design. 
@@ -14,7 +13,6 @@ image or pattern for responsive design.
 -------------------------------------------------------
 
 ## Work 
-- make workpage responsive
 
 ### Design 
     - AI Page - ITS 
