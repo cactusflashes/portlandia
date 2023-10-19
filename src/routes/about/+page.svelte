@@ -8,7 +8,7 @@
     import { fly } from 'svelte/transition'; 
     import { cubicInOut } from 'svelte/easing';
     import me from '/src/lib/sf.jpg'; 
-    import resume from '/src/lib/Resume - Joseph Salmon.pdf'; 
+    import resume from '/src/lib/Joseph S - Resume.pdf';
 
     let visible = false; 
 
@@ -31,6 +31,15 @@
         window.open(resume); 
     }
 
+
+    function viewWork() {
+        visible = false;
+        setTimeout(function(){
+            window.location.href="/work"
+        }, 600);
+        
+    }
+
 </script>
 
 
@@ -46,14 +55,14 @@
                     <!-- svelte-ignore a11y-click-events-have-key-events -->
         <ul>
             <li on:click={goHome}>home</li>
-            <li>work</li>
+            <li on:click={viewWork}>work</li>
             <li on:click={openRes}>cv</li>
         </ul>
 
     </div>
 
     <div class="body-wrap-1"></div>
-    <h1>About Me</h1>
+    <h1>A little about me</h1>
 
     <div class="body-wrap-2"></div>
 
@@ -62,20 +71,20 @@
 <img src={me} alt="me by the golden gate bridge" class="me-photo" />
 
         <div class="me-desc">
-            <h6>I'm passionate about all things digital media, web, and learning.</h6>
-            <p>I got my start in media during high school, where I was elected club president for 
-                my school's Film & TV Production program. Since then, I've been chasing my passion
-                for digital media across dozens of mediums. I've been privileged to work in 
+            <h6>I'm passionate about all things digital, web, & learning.</h6>
+            <p>I grew to love digital media in high school, where I was elected club president for 
+                my school's Film & TV Production program. Since then, I've been exploring my passion
+                for creating across dozens of mediums. I've been privileged to work in 
                 visual & motion design, 3D design, videography & photography, as well as in
                 marketing and communication roles. 
                 
             </p>
 
             <p>These days, I've settled into my passion for designing interactive experiences
-                through the web, apps, and software. I'm constantly inspired by learning new
-                ways to create and build, and I love contributing to projects and ideas. If you're 
-                looking for an extra hand in your next project; send me a message! I'd love to
-                contribute through freelance oppourtunities, or impactful pro-bono and volunteer projects.
+                through the web, apps, and software. I enjoy learning new
+                ways to build and create, and I love contributing to projects and ideas. If you're 
+                looking for an extra hand, send me a message! I'd love to
+                contribute through freelance oppourtunities, and for impactful pro-bono or volunteer projects and organizations.
             </p>
         </div>  
     </div>
@@ -83,34 +92,32 @@
     <div class="body-wrap-1"></div>
 
     <h6>Contact</h6>
-    <h3 style="color: grey">airefrescodesign@gmail.com</h3>
+    <h3 style="color: grey; font-size: 1.2rem">airefrescodesign@gmail.com</h3>
 
     <div class="body-wrap-1"></div>
 
 
 
+    <!--footer-->
     <div class="footer-page">
-            
         <div class="footer-li-container">
-            <h3 class="footer-text-no-margin">Built with 💛 using</h3>
+            <h3 class="footer-text-no-margin">Built with love and lots of help from</h3>
             <h3 class="footer-text-no-margin" style="color: grey"><strong><a href="https://kit.svelte.dev/">SvelteKit↗</a></strong>&nbspfor code</h3>
             <h3 class="footer-text-no-margin" style="color: grey"><strong><a href="https://github.com">Github↗</a></strong>&nbspfor versions</h3>
             <h3 class="footer-text-no-margin" style="color: grey"><strong><a href="https://netlify.com">Netlify↗</a></strong>&nbspfor launch</h3>
             &nbsp
-            <h3 class="footer-text-no-margin" style="color: grey"><strong><a href="https://kit.svelte.dev/">Check out how I built this site!</a></h3>
+            <h3 class="footer-text-no-margin" style="color: grey"><strong><a href="/portfolio">Some thoughts on portfolios</a></h3>
         </div>
-
 
         <div class="footer-li-container-2">
             <h3 class="footer-text-no-margin">Find me elsewhere</h3>
             <h3 class="footer-text-no-margin" style="color: grey"><strong><a href="https://read.cv/cacti">read.cv↗</a></strong></h3>
             <h3 class="footer-text-no-margin" style="color: grey"><strong><a href="https://github.com/cactusflashes">Github↗</a></strong></h3>
+            <h3 class="footer-text-no-margin" style="color: grey"><strong><a href="https://connect.mozilla.org/t5/user/viewprofilepage/user-id/41047">Mozilla↗</a></strong></h3>
             <h3 class="footer-text-no-margin" style="color: grey"><strong><a href="mailto:airefrescodesign@gmail.com">Email↗</a></strong></h3>
-            &nbsp
         </div>
-
-
     </div>
+
 
 </div>
 

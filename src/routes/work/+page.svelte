@@ -8,7 +8,7 @@
     import { fly } from 'svelte/transition'; 
     import { cubicInOut } from 'svelte/easing';
     import me from '/src/lib/sf.jpg'; 
-    import resume from '/src/lib/Resume - Joseph Salmon.pdf'; 
+    import resume from '/src/lib/Joseph S - Resume.pdf';
 
     let visible = false; 
 
