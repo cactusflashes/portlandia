@@ -1,7 +1,7 @@
 <style>
-    @import url(../styles/page.css);
-    @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap');
-    @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+    @import url(../styles/style.css);
+    @import url('https://fonts.googleapis.com/css2?family=Urbanist:wght@300;400;500;600;700;800&display=swap');
+
 </style>
 
 
@@ -51,8 +51,6 @@
 
 <body>
     <div class="container">
-
-        <div class="exit" alt="exit page">x</div>
 
         <h1>AI</h1>
 

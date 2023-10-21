@@ -1,7 +1,8 @@
-<title>Joseph S. | About </title>
+<title>About - Joseph</title>
 
 <style>
-@import url(../styles/about.css);
+@import url(../styles/style.css);
+@import url('https://fonts.googleapis.com/css2?family=Urbanist:wght@300;400;500;600;700;800&display=swap');
 </style>
 
 <script>
@@ -9,57 +10,14 @@
     import { cubicInOut } from 'svelte/easing';
     import me from '/src/lib/sf.jpg'; 
     import resume from '/src/lib/Joseph S - Resume.pdf';
-
-    let visible = false; 
-
-    function animateIn(){
-        setTimeout(function(){
-            visible = true;
-        }, 100);
-    }
-
-    animateIn();
-
-    function goHome(){
-        visible = false; 
-        setTimeout(function(){
-            window.location.href="/"; 
-        }, 500); 
-    }
-
-    function openRes(){
-        window.open(resume); 
-    }
+    import Navbar from '../navbar.svelte';
+    import Footer from '../footer.svelte'; 
 
 
-    function viewWork() {
-        visible = false;
-        setTimeout(function(){
-            window.location.href="/work"
-        }, 600);
-        
-    }
 
 </script>
 
-
-{#if visible === true}
-
-    <div class="container" transition:fly={{y: -30, duration: 500, easing: cubicInOut}}>
-
-    <div class="nav-wrapper">
-
-        <h3 class="logo-title">Joseph S. | 2023</h3>
-
-        <!-- svelte-ignore a11y-no-noninteractive-element-interactions -->
-                    <!-- svelte-ignore a11y-click-events-have-key-events -->
-        <ul>
-            <li on:click={goHome}>home</li>
-            <li on:click={viewWork}>work</li>
-            <li on:click={openRes}>cv</li>
-        </ul>
-
-    </div>
+    <div class="container">
 
     <div class="body-wrap-1"></div>
     <h1>A little about me</h1>
@@ -96,29 +54,4 @@
 
     <div class="body-wrap-1"></div>
 
-
-
-    <!--footer-->
-    <div class="footer-page">
-        <div class="footer-li-container">
-            <h3 class="footer-text-no-margin">Built with love and lots of help from</h3>
-            <h3 class="footer-text-no-margin" style="color: grey"><strong><a href="https://kit.svelte.dev/">SvelteKit↗</a></strong>&nbspfor code</h3>
-            <h3 class="footer-text-no-margin" style="color: grey"><strong><a href="https://github.com">Github↗</a></strong>&nbspfor versions</h3>
-            <h3 class="footer-text-no-margin" style="color: grey"><strong><a href="https://netlify.com">Netlify↗</a></strong>&nbspfor launch</h3>
-            &nbsp
-            <h3 class="footer-text-no-margin" style="color: grey"><strong><a href="/portfolio">Some thoughts on portfolios</a></h3>
-        </div>
-
-        <div class="footer-li-container-2">
-            <h3 class="footer-text-no-margin">Find me elsewhere</h3>
-            <h3 class="footer-text-no-margin" style="color: grey"><strong><a href="https://read.cv/cacti">read.cv↗</a></strong></h3>
-            <h3 class="footer-text-no-margin" style="color: grey"><strong><a href="https://github.com/cactusflashes">Github↗</a></strong></h3>
-            <h3 class="footer-text-no-margin" style="color: grey"><strong><a href="https://connect.mozilla.org/t5/user/viewprofilepage/user-id/41047">Mozilla↗</a></strong></h3>
-            <h3 class="footer-text-no-margin" style="color: grey"><strong><a href="mailto:airefrescodesign@gmail.com">Email↗</a></strong></h3>
-        </div>
-    </div>
-
-
 </div>
-
-{/if}
