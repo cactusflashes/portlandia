@@ -1,20 +1,16 @@
 <style>
-    @import url(../styles/page.css);
-    @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap');
-    @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+    @import url(../styles/style.css);
+    @import url('https://fonts.googleapis.com/css2?family=Urbanist:wght@300;400;500;600;700;800&display=swap');
 </style>
 
 
 <script>
-import { fly } from 'svelte/transition';
-import { cubicInOut } from 'svelte/easing';
 
 import doodOne from '/src/lib/dood-1.png';
 import doodTwo from '/src/lib/dood-2.png';
 import doodThree from '/src/lib/dood-3.jpg';
 import doodFour from '/src/lib/dood-4.jpg';
 
-let visible = false; 
 
 function animate(){
     setTimeout(function(){
@@ -25,26 +21,12 @@ function animate(){
 
 animate();
 
-function backBtn() {
-    visible = false; 
-
-    setTimeout(function(){
-        window.history.go(-1); return false; 
-
-    }, 100); 
-
-}
 </script>
 
 
 <body>
 
-    {#if visible === true}
-    <div class="container" transition:fly={{y: -50, duration: 500, easing: cubicInOut}}>
-
-        <!-- svelte-ignore a11y-click-events-have-key-events -->
-        <!-- svelte-ignore a11y-no-static-element-interactions -->
-        <div class="exit" alt="exit page" on:click={backBtn}>x</div>
+    <div class="container">
 
         <h1>DoodleBot</h1>
 
@@ -94,5 +76,4 @@ function backBtn() {
         </p>
 
     </div>
-    {/if}
 </body>

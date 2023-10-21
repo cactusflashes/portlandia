@@ -1,0 +1,606 @@
+::selection {
+    background-color: #e8ae47; 
+    color: black; 
+}
+
+body {
+    background-color: white;
+    margin: 0;
+    padding: 0;
+    overflow-y: visible; 
+    overflow-x: hidden;
+}
+
+.container {
+    display: flex;
+    background:  #eeeeee  ;
+    height: 100%;
+    width: 100vw;
+    margin: 0;
+    flex-direction: column;
+    align-items: center;
+    overflow-y: visible;
+    color: black;
+    transition: background-color 0.2s, color 0.3s;
+}
+
+.header-container {
+    display: flex;
+    align-items: center;
+    max-width: 90%;
+    flex-direction: column;
+}
+
+/* spacers */
+.body-wrap-1 {
+    display: flex; 
+    height: 10vh; 
+    min-height: 100px;
+}
+
+.body-wrap-2 {
+    display: flex; 
+    height: 5vh; 
+    min-height: 40px;
+}
+
+.body-wrap-3 {
+    display: flex; 
+    height: 15px; 
+}
+
+.animated-text {
+    display: flex;
+}
+
+.failover-text {
+    display: none;
+}
+
+/* Text Elements & Positioning*/
+h1 {
+    display: flex;
+    font-family: -apple-system, BlinkMacSystemFont, 'Urbanist', sans-serif;
+    font-weight: 400;
+    font-size: 3rem;
+    margin: 10px;
+}
+
+h2 {
+    display: flex;
+    font-family: -apple-system, BlinkMacSystemFont, 'Urbanist', sans-serif;
+    font-weight: 300;
+    font-size: 1.2rem;
+    margin: 0;
+}
+
+h3 {
+    display: flex;
+    font-family: -apple-system, BlinkMacSystemFont, 'Urbanist', sans-serif;
+    font-weight: 300;
+    font-size: .9rem;
+}
+
+h4 {
+    display: flex;
+    font-family: -apple-system, BlinkMacSystemFont, 'Urbanist', sans-serif;
+    font-weight: 500;
+    font-size: 1.1rem;
+    margin: 0;
+}
+
+h5 {
+    display: flex;
+    font-family: -apple-system, BlinkMacSystemFont, 'Urbanist', sans-serif;
+    font-weight: 300;
+    font-size: .8rem;
+    margin: 0;
+
+}
+
+h6 {
+    display: flex;
+    font-family: -apple-system, BlinkMacSystemFont, 'Urbanist', sans-serif;
+    font-weight: 500;
+    font-size: 1.5rem;
+    margin: 0;
+
+}
+
+.h7 {
+    display: flex;
+    font-family: -apple-system, BlinkMacSystemFont, 'Urbanist', sans-serif;
+    font-weight: 400;
+    font-size: .85rem;
+    margin-top: 0vw;
+    margin-bottom: 0;
+    letter-spacing: .2em;
+    text-transform: uppercase;
+}
+
+p {
+    font-family: -apple-system, BlinkMacSystemFont, 'Urbanist', sans-serif;
+    font-weight: 400;
+
+}
+
+a {
+    text-decoration: none;
+    color: black; 
+}
+
+/* Project Containers */
+.project-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    border-radius: 1.5vw;
+    flex-direction: row;
+    gap: 2vw;
+}
+
+.color-filter {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(232, 174, 71, 0.3);
+    z-index: 1;
+    transition: background-color .5s; 
+}
+
+
+.p-txt-con {
+    display: flex; 
+    opacity: 0;
+    visibility: hidden;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: center;
+    background-color: rgba(255, 255, 255, .5);
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);    
+    padding: 8px 20px;
+    border-radius: 15px;
+    z-index: 10;
+    margin-top: 4vh;
+    max-width: 40%;
+    margin-right: 4%;
+    position: relative; 
+    transition: opacity .5s, visibility .5s; 
+
+}
+
+/* Project Four */
+
+.wordpress {
+    display: flex;
+    background-color: #e8ae47;
+    background-image: url('/src/lib/ai-bg-01.png');
+    background-size: 100%; 
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 700px;
+    max-height: 900px;
+    width: 70%; 
+    min-width: 400px;
+    max-width: 1800px;
+    transition: border 0.5s, color 0.3s, margin-top 0.5s, background-color .5s;
+    border: 1.5px solid #bdbdbd; 
+    border-radius: 30px;
+    flex-direction: column;
+    overflow: hidden;
+    align-items: flex-end;
+    position: relative;
+}
+
+.doodle-bot {
+    display: flex;
+    position: relative;
+    background-image: url('/src/lib/doodle-01.png');
+    background-position: center;
+    background-size: 70%; 
+    background-repeat: no-repeat;
+    background-color: #e8ae47;
+    height: 60vh;
+    min-height: 700px;
+    max-height: 900px;
+    width: 70%; 
+    max-width: 1800px;
+    transition: border 0.5s, color 0.3s, margin-top 0.5s;
+    border: 1.5px solid #d5d5d5;
+    border-radius: 30px;
+    flex-direction: column;
+    overflow: hidden;
+    align-items: flex-end;
+
+}
+
+.google-storage {
+    display: flex;
+    position: relative;
+    background-color: #e8ae47;
+    background-image: url('/src/lib/google-proj-01.png');
+    background-size: 100%; 
+    background-position: center;
+    background-repeat: no-repeat;
+    align-items: flex-end;
+    height: 60vh;
+    max-height: 900px;
+    max-width: 1800px;
+    min-height: 700px;
+    transition: border 0.5s, margin-top 0.5s; 
+    width: 70%; 
+    border-radius: 30px;
+    flex-direction: column;
+    overflow: hidden;
+    border: 1.5px solid #d5d5d5;
+}
+
+.doodle-bot:hover, .wordpress:hover, .google-storage:hover {
+    display: flex;
+    transition: border 0.5s, color 0.3s, margin-top 0.5s;
+    cursor: pointer;
+    border: 1.5px solid #a6741e; 
+
+}
+
+
+.wordpress:hover .color-filter {
+    background-color: rgba(232, 174, 71, 0);
+    transition: background-color .5s; 
+}
+
+.wordpress:hover .p-txt-con {
+    opacity: 1; 
+    visibility: visible;
+    transition: opacity .5s, visibility .5s; 
+}
+
+.doodle-bot:hover .color-filter {
+    background-color: rgba(232, 174, 71, 0);
+    transition: background-color .5s; 
+}
+
+.doodle-bot:hover .p-txt-con {
+    opacity: 1; 
+    visibility: visible;
+    transition: opacity .5s, visibility .5s; 
+}
+
+.google-storage:hover .color-filter {
+    background-color: rgba(232, 174, 71, 0);
+    transition: background-color .5s; 
+}
+
+.google-storage:hover .p-txt-con {
+    opacity: 1; 
+    visibility: visible;
+    transition: opacity .5s, visibility .5s; 
+}
+
+
+/* View all work button */
+
+.view-all {
+    display: flex;
+    align-self: center;
+    border: 1px solid #bdbdbd;
+    background-color: white;
+    color: black;
+    padding: 12px 20px;
+    font-size: 1rem;
+    font-weight: 400; 
+    font-family: -apple-system, BlinkMacSystemFont, 'Urbanist', sans-serif;
+    border-radius: 10px;
+    transition: background-color 0.5s, color 0.3s, scale 0.5s;
+}
+
+.view-all:hover {
+    display: flex;
+    align-self: center;
+    border: 1px solid #e0e0e0;
+    background-color: #e8ae47;
+    color: black;
+    font-weight: 400;     
+    font-family: -apple-system, BlinkMacSystemFont, 'Urbanist', sans-serif;
+    transition: background-color 0.5s, color 0.3s, scale 0.5s;
+    cursor: pointer;
+}
+
+
+.up-to {
+    display: flex;
+    font-size: 2rem;
+}
+
+.bottom-row {
+    display: flex; 
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 90%;
+    gap: 10px;
+}
+
+.up-to-photo {
+    border-radius: 30px;
+    min-height: 400px;
+    max-height: 400px;
+
+}
+
+.work-column {
+    display: flex;
+    flex-direction: column; 
+    align-items: center;
+    justify-content: center;
+    background-color: white; 
+    border: 1px solid #e0e0e0; 
+    width: 28%;
+    min-height: 400px;
+    max-height: 400px;
+    border-radius: 30px;
+}
+
+.work-text-container { /* this contianer holds the text inside of the work column work-column > work-text-cont > blurb-container(s)*/
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.blurb-container {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+.selected-work {
+    display: flex; 
+    flex-direction: row;
+    color: gray;
+    scale: 0.75; 
+    align-items: flex-start;
+    width: 90%;
+    margin-bottom: 10px;
+}
+
+@media all and (min-width: 2200px) {
+    .wordpress {
+        background-size: 60%;
+    }
+
+}
+
+
+/*Med screen queries*/
+
+@media all and (max-width: 1024px) {
+    .project-container {
+        flex-direction: column;
+    }
+
+    .wordpress, .wordpress:hover, .doodle-bot, .doodle-bot:hover,
+    .google-storage, .google-storage:hover {
+        width: 80%;
+        min-height: 300px;
+        max-height: 300px;
+        background-size: 100%;
+    }
+
+    .p-txt-con {
+        visibility: visible;
+        opacity: 100;
+    }
+
+    .bottom-row {
+        flex-direction: column;
+    }
+
+    .work-column {
+        width: 90%;
+    }
+
+    .up-to-photo {
+        max-width: 90%;
+        min-width: none;
+        max-height: none;
+    }
+
+}
+
+
+/*Small screen queries*/
+
+
+@media all and (max-width: 700px) {
+
+    /*text elements*/
+
+    h1 {
+        font-size: 2.6rem;
+    }
+
+    h4 {
+        font-size: 1.2rem;
+    }
+
+    h5 {
+        font-size: 1rem;
+    }
+
+    h6 {
+        font-size: 1.5rem;
+    }
+
+    .h7 {
+        font-size: .7rem;
+    }
+
+    .up-to {
+        font-size: 1.5rem;
+    }
+
+    .animated-text {
+        display: none; 
+    }
+
+    .failover-text {
+        display: flex; 
+        font-size: 1.2rem;
+        max-width: 90%;
+        text-align: center;
+    }
+
+    .body-wrap-2 {
+        height: 10px;
+    }
+
+    .body-wrap-1 {
+        height: 10px; 
+    }
+
+    .wordpress, .wordpress:hover, .doodle-bot, .doodle-bot:hover,
+    .google-storage, .google-storage:hover {
+        width: 80%;
+        min-height: 300px;
+        min-width: 80%;
+        max-height: 300px;
+        background-size: 100%;
+    }
+
+
+
+    .p-txt-con {
+        visibility: visible;
+        opacity: 100;
+        max-width: none;
+    }
+
+    .bottom-row {
+        flex-direction: column;
+    }
+
+    .work-column {
+        width: 90%;
+    }
+
+    .up-to-photo {
+        max-width: 90%;
+        min-width: none;
+        max-height: none;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ABOUT PAGE ONLY */ 
+
+
+.me-photo {
+    display: flex; 
+    align-self: center;
+    max-width: 30%;
+    border-radius: 40px;
+}
+
+.img-cap {
+    display: flex; 
+    height: 50px; 
+    width: 200px;
+    background-color: rgba(255, 255, 255, .7);
+    border-radius: 10px;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    left: 22vw;
+    top: 90vh;  
+    font-family: -apple-system, BlinkMacSystemFont, 'Urbanist', sans-serif;
+    font-weight: 400;
+    
+}
+
+.picture {
+    display: flex; 
+    flex-direction: column;
+}
+
+.about-row {
+    display: flex; 
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 5vw; 
+    width: 90%;
+}
+
+.me-desc {
+    display: flex;
+    flex-direction: column;
+    gap: 0; 
+    margin: 0; 
+    max-width: 30%;
+}
+
+@media only screen and (max-width: 1000px) {
+    .about-row {
+        flex-direction: column;
+    }
+
+    .me-photo {
+        align-self: center;
+        max-width: 50%;
+    }
+
+    .me-desc {
+        display: flex;
+        flex-direction: column;
+        gap: 0; 
+        margin: 0; 
+        max-width:50%;
+    }
+}
+
+
+@media only screen and (max-width: 700px) {
+
+    .me-desc {
+        display: flex;
+        flex-direction: column;
+        gap: 0; 
+        margin: 0; 
+        max-width: 80%;
+    }
+
+    .me-photo {
+        max-width: 80%;
+    }
+
+}
+
+
+
+
+
+
+
+
+
