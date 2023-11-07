@@ -24,6 +24,9 @@
 ##### Update October 4th, 2023
 ###### Actually finished a lot of small changes between updates. I have a better merge system and a better live dev environment to test changes now. I scrapped my mobile UI for now, but I am going to retackle that this upcoming weekend. I'm actually hoping to have a first complete prototype complete before next week. Cheers!  
 
+##### Update November 6th, 2023
+###### I hit a pretty big block about 2 weeks ago and haven't committed any code since then. More stressors have come up in my life, and I am working on a soul project in the meantime with some Swift. Will be back before the end of the year to finish this off.  
+
 ## Stack 
 #### SvelteKit for framework 
 #### Netlify for deployment
