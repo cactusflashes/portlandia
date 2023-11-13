@@ -5,6 +5,7 @@
 ---
 
 ## Updates 
+---
 ### Update Sept. 7th, 2023 8:26 p.m.
 #### Homepage is about 75% to 80% complete at this stage. I need to polish some of the viewport scalability and positioning of child elements, but I am in a good spot now with the functionality. The real chore is going to be going back and procuring the data from past 3 years' projects and giving them a polish and shine. 
 
@@ -27,7 +28,8 @@
 ### Update November 12th, 2023
 #### Getting stale on another project for the time being so it was refreshing to hop back over here and work on some relaxing programming while not straining my brain lol. A few reconfigurations, but I will be rolling to prod hopefully before the end of the year. 
 
-### Stack 
-#### SvelteKit for framework 
-#### Netlify for deployment
-#### Svelte-Animated-Headline by Elron for Slugger 
+## Stack
+---
+### SvelteKit for framework 
+### Netlify for deployment
+### Svelte-Animated-Headline by Elron for Slugger 
