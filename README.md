@@ -27,6 +27,9 @@
 ##### Update November 6th, 2023
 ###### I hit a pretty big block about 2 weeks ago and haven't committed any code since then. More stressors have come up in my life, and I am working on a soul project in the meantime with some Swift. Will be back before the end of the year to finish this off.  
 
+##### Update November 12th, 2023
+###### Getting stale on another project for the time being so it was refreshing to hop back over here and work on some relaxing programming while not straining my brain lol. A few reconfigurations, but I will be rolling to prod hopefully before the end of the year. 
+
 ## Stack 
 #### SvelteKit for framework 
 #### Netlify for deployment
