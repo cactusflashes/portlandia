@@ -1,10 +1,5 @@
 <title>About - Joseph</title>
 
-<style>
-@import url(../styles/style.css);
-@import url('https://fonts.googleapis.com/css2?family=Urbanist:wght@300;400;500;600;700;800&display=swap');
-</style>
-
 <script>
     import { fly } from 'svelte/transition'; 
     import { cubicInOut } from 'svelte/easing';

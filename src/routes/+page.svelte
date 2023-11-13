@@ -1,67 +1,33 @@
 <title>Joseph - Home</title>
-
-<style>
-@import url(styles/style.css);
-@import url('https://fonts.googleapis.com/css2?family=Urbanist:wght@300;400;500;600;700;800&display=swap');
-</style>
-
 <script>
-    import { cubicInOut } from 'svelte/easing';
-    import { fade } from 'svelte/transition';
     import { AnimatedHeadline } from 'svelte-animated-headline';
-    import resume from '/src/lib/Joseph S - Resume.pdf';
-    import upto1 from '$lib/upto1.jpg'; 
-
-    let visible = false; //keep true for testing. publish with false to delay page load and animate in.
-
-    //animates the page in 
-    function animateIn(){
-        setTimeout(function(){
-            visible = true;
-        }, 100);
-    }
-    
-    animateIn();
-
-    function viewWork() {
-        visible = false; 
-        setTimeout(function(){
-            window.location.href="/work";
-        }, 600);     
-    }
-
-    function openRes(){
-        window.open(resume); 
-    }
+    import upto1 from '$lib/upto1.jpg';
 
 </script>
 
-<!-- svelte-ignore a11y-click-events-have-key-events -->
-<!-- svelte-ignore a11y-no-static-element-interactions -->
-<!-- svelte-ignore a11y-no-noninteractive-element-interactions -->
 <body>
-    {#if visible}
-    <div class="container" transition:fade={{duration: 500, easing: cubicInOut}}>
+    <div class="container">
         <div class="body-wrap-1"></div>
         <div class="body-wrap-2"></div>
         <!--header-->
         <div class="header-container">
-            <h1>Hello 👋, I'm Joseph.</h1>
+            <h1>Hello, I'm Joseph.</h1>
             <h2 class="animated-text">
-                I'm a&nbsp
+                I'm a&nbsp<strong>
                 <AnimatedHeadline
                 texts={[
                 "Front-End Engineer",
                 "UI/UX Designer", 
+                "iOS Engineer",
                 "Visual Designer", 
                 "Marketing Analyst", 
                 "Web Designer", 
                 "Web Developer", 
                 "Motion Designer", 
                 ]} 
-                wait={400}> <!--wait 400ms? seems way slower than ms though. 400 units seems okay for now. maybe a little fast.-->
-                </AnimatedHeadline>
-                &nbspworking remotely from <h2 style="color: #e8ae47; font-weight: 600"> &nbsp;sunny&nbsp;</h2>Arizona.
+                wait={400}> 
+                </AnimatedHeadline></strong>
+                &nbspworking remotely from <h2 style="color: #4287f5; font-weight: 600"> &nbsp;sunny&nbsp;</h2>Arizona.
             </h2>
 
             <!--700px and below display text-->
@@ -110,10 +76,7 @@
         </div>
         <!--end projs-->
 
-        <div class="body-wrap-2"></div>
-        <!--view all work button-->
-        <button class="view-all" on:click={viewWork}>view more of my work →</button>
-        <div class="body-wrap-2"></div>
+        <div class="body-wrap-1"></div>
 
         <!--what I've been up to-->
         <h1 class="up-to">What I've been up to</h1>
@@ -135,7 +98,7 @@
                         <h5 style="color: grey">NAU Information Technology Services <br> May '21 - May '22</h5>            
                         <div class="body-wrap-3"></div>
                         <h4>Visual Designer</h4>
-                        <h5 style="color: grey">SVE Cheerleading <br> November '18 - April '21</h5>
+                        <h5 style="color: grey">SVE Cheer <br> Nov '18 - April '21</h5>
                     </div>
                 </div>
             </div>
@@ -147,5 +110,4 @@
     <div class="body-wrap-3"></div>
 
     </div>
-    {/if}
 </body>

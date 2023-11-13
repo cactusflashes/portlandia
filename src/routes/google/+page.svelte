@@ -1,64 +1,26 @@
-<style>
-    @import url(../styles/style.css);
-    @import url('https://fonts.googleapis.com/css2?family=Urbanist:wght@300;400;500;600;700;800&display=swap');
-</style>
 <script>
+import googleBanner from '/src/lib/work assets/google-banner.svg'; 
 
-    import google from '/src/lib/google-banner.svg'; 
-    import seoA from '/src/lib/seo-1.png'; 
-    import seoB from '/src/lib/seoB.png'; 
-    import seoC from '/src/lib/seoC.png';
-    import seoD from '/src/lib/seoD.png';
-    import seoE from '/src/lib/seoE.png';
-    import seoF from '/src/lib/seoF.jpg';
-    import seoG from '/src/lib/seoG.jpg';
+</script>
 
-    import { fly } from 'svelte/transition'; 
-    import { cubicInOut } from 'svelte/easing';
-
-    let visible = true; 
-
-
-    function backBtn() {
-        visible = false; 
-        setTimeout(function(){
-            window.history.go(-1); return false; 
-        }, 500); 
-    }
-
-
-    function animate(){
-        setTimeout(function(){
-            visible = true; 
-        }, 500); 
-    }
-
-    animate();
-
-    </script>
-    
-    
-    <body>
-        {#if visible === true}
-        <!-- svelte-ignore a11y-no-static-element-interactions -->
-        <div class="container" transition:fly={{y: -50, duration: 500, easing: cubicInOut}}>
+<body>
+    <div class="container">
     
             <!-- svelte-ignore a11y-click-events-have-key-events -->
-            <div class="exit" alt="exit page" on:click={backBtn}>x</div>
-    
+            <div class="exit" alt="exit page">x</div>
+            <div class="body-wrap-1"></div>
             <h1>Google Storage Quota</h1>
-    
             <div class="dynamic-row">
-    
-                <h2>Communication Design</h2>
+                <h2>Digital Campaign</h2>
                 <h2>SEO</h2>
                 <h2>2022</h2>
-    
             </div>
-    
-            <img src={google} alt="the google logo" class="template-img"/> 
-
-            <h3 class="subhead">A study in adaptability</h3>
+            <div class="body-wrap-2"></div>
+            <div class="line"></div>
+                <img src={googleBanner} alt="google logo" class="body-img">
+            <div class="line"></div>
+            <div class="body-wrap-2"></div>
+            <h6 class="subhead">A study in adaptability</h6>
 
 
             <p class="body-text">
@@ -69,7 +31,9 @@
                 reduction of pooled university storage. 
             </p>
 
-            <h3 class="subhead">How we chose to respond</h3>
+            <div class="body-wrap-2"></div>
+
+            <h6 class="subhead">How we chose to respond</h6>
 
             <p class="body-text">
                 Our stakeholders opted to enact a 25GB limit on all NAU Google accounts, with options to expand storage
@@ -96,7 +60,6 @@
 
                 </div>
 
-                <img src={seoC} alt="placeholder" class="window-p"/> 
             
             </div>
 
@@ -113,10 +76,6 @@
                 and staff members, ages 18 to 80. 
             </p>
 
-            <div class="two-pic-row">
-                <img src={seoF} alt="a social media post" class="template-img-small">
-                <img src={seoG} alt="a social media post" class="template-img-small">
-            </div>
 
             <p class="body-text">
                 My team was comprised of myself, alongside my student employee, Rainee. Under my direction, Rainee
@@ -125,7 +84,7 @@
             </p>
 
 
-            <h3 class="subhead">SEO</h3>
+            <h6>SEO</h6>
 
 
             <p class="body-text">
@@ -150,7 +109,6 @@
 
                 </div>
 
-                <img src={seoA} alt="a google search and snippet showing our project details" class="window-p"/> 
             
             </div>
 
@@ -166,7 +124,6 @@
 
                 </div>
 
-                <img src={seoD} alt="a google search and snippet showing our project details" class="window-p"/> 
             
             </div>
 
@@ -189,7 +146,6 @@
 
                 </div>
 
-                <img src={seoE} alt="placeholder" class="window-p"/> 
             
             </div>
 
@@ -201,7 +157,7 @@
                 strategies. 
             </p>
 
-            <h3 class="subhead">Web</h3>
+            <h6>Web</h6>
 
             <p class="body-text">
                 I created our project page through WordPress, where we would be funneling users
@@ -222,13 +178,12 @@
 
                 </div>
 
-                <img src={seoB} alt="placeholder" class="window-p"/> 
             
             </div>
 
             <div class="body-wrap-2"></div>
 
-            <h3 class="subhead">KPI's and Metrics</h3>
+            <h6 class="subhead">KPI's and Metrics</h6>
 
             <p class="body-text">
                 During our weekly standup meetings for this project, we were able to compare the results of our digital campaign
@@ -241,6 +196,5 @@
                 for our project page. 
             </p>
     
-        </div>
-        {/if}
-    </body>
+    </div>
+</body>
