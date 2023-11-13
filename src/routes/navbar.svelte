@@ -36,13 +36,15 @@ li {
 
 li:hover {
     display: flex;
-    background-color: #e8ae47;
-    padding: 10px 10px;
+    background-color: #4287f5;
     font-family: -apple-system, BlinkMacSystemFont, 'Urbanist', sans-serif;
-    font-size: .9rem;
     cursor: pointer;
-    color: black;
     transition: background-color 0.5s, color 0.3s;
+}
+
+li:hover a {
+    color: white; 
+    transition: color 0.2s; 
 }
 
 .logo-title {
@@ -76,13 +78,16 @@ li:hover {
 
 </style>
 
+<script>
+    import resume from '/src/lib/Joseph S - Resume.pdf';
+</script>
+
 
 <div class="nav-wrapper">
     <h3 class="logo-title">Joseph S. | 2023</h3>
     <ul>
         <li><a href="/">Home</a></li>
-        <li><a href="/work">Work</a></li>
         <li><a href="/about">About</a></li>
-        <li><a href="/resume">CV</a></li>
+        <li><a href={resume}>CV</a></li>
     </ul>
 </div>

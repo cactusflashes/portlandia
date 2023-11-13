@@ -1,14 +1,13 @@
 <title>Joseph S. | About </title>
 
 <style>
-@import url(../styles/portfolio.css);
+@import url(../styles/style.css);
 </style>
 
 <script>
     import { fly } from 'svelte/transition'; 
     import { cubicInOut } from 'svelte/easing';
     import me from '/src/lib/sf.jpg'; 
-    import resume from '/src/lib/Resume - Joseph Salmon.pdf'; 
 
     let visible = false; 
 

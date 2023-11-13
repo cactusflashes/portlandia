@@ -1,6 +1,6 @@
 ::selection {
-    background-color: #e8ae47; 
-    color: black; 
+    background-color: #4287f5; 
+    color: white; 
 }
 
 body {
@@ -13,7 +13,7 @@ body {
 
 .container {
     display: flex;
-    background:  #eeeeee  ;
+    background:  #eeeeee;
     height: 100%;
     width: 100vw;
     margin: 0;
@@ -50,11 +50,15 @@ body {
 }
 
 .animated-text {
-    display: flex;
+    display: flex; 
+    color: #666
 }
+
 
 .failover-text {
     display: none;
+    color: #666
+
 }
 
 /* Text Elements & Positioning*/
@@ -146,7 +150,7 @@ a {
     left: 0;
     height: 100%;
     width: 100%;
-    background-color: rgba(232, 174, 71, 0.3);
+    background-color: rgba(66, 135, 245, 0.3);
     z-index: 1;
     transition: background-color .5s; 
 }
@@ -177,7 +181,7 @@ a {
 
 .wordpress {
     display: flex;
-    background-color: #e8ae47;
+    background-color: #4287f5;
     background-image: url('/src/lib/ai-bg-01.png');
     background-size: 100%; 
     background-position: center;
@@ -199,11 +203,11 @@ a {
 .doodle-bot {
     display: flex;
     position: relative;
-    background-image: url('/src/lib/doodle-01.png');
+    background-image: url('/src/lib/doodle.png');
     background-position: center;
     background-size: 70%; 
     background-repeat: no-repeat;
-    background-color: #e8ae47;
+    background-color: #4287f5;
     height: 60vh;
     min-height: 700px;
     max-height: 900px;
@@ -221,7 +225,7 @@ a {
 .google-storage {
     display: flex;
     position: relative;
-    background-color: #e8ae47;
+    background-color: #4287f5;
     background-image: url('/src/lib/google-proj-01.png');
     background-size: 100%; 
     background-position: center;
@@ -243,7 +247,7 @@ a {
     display: flex;
     transition: border 0.5s, color 0.3s, margin-top 0.5s;
     cursor: pointer;
-    border: 1.5px solid #a6741e; 
+    border: 1.5px solid #0045b3; 
 
 }
 
@@ -604,3 +608,137 @@ a {
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+/*   WORK PAGES   */
+
+.dynamic-row {
+    display: flex; 
+    flex-direction: row; 
+    gap: 20px; 
+    color: #555555; 
+    scale: .8; 
+}
+
+.body-text {
+    max-width: 60%;
+}
+
+.body-img {
+    max-width: 50%;
+    border-radius: 30px; 
+    margin: 50px; 
+}
+
+.browser {
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+    justify-content: center;
+    align-items: center;
+    background-color: #d5d5d5;  
+    padding: 10px 10px 2px 10px; 
+    border-radius: 10px;
+  }
+  
+  .browser-control {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      gap: 8px; 
+      align-self: baseline;
+      padding-left: 5px;
+  }
+
+
+.button-1 {
+    display: flex; 
+    flex-direction: row;
+    height: 10px; 
+    width: 10px;
+    border-radius: 100%;
+    background-color: red;
+    z-index: 100;
+}
+
+.button-2 {
+    display: flex; 
+    flex-direction: row;
+    height: 10px; 
+    width: 10px;
+    border-radius: 100%;
+    background-color: orange;
+    z-index: 100;
+}
+
+.button-3 {
+    display: flex; 
+    flex-direction: row;
+    height: 10px; 
+    width: 10px;
+    border-radius: 100%;
+    background-color: limegreen; 
+    z-index: 100;
+}
+
+.gpt {
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+    margin: 10px; 
+    padding: 20px; 
+    background-color: #eeeeee;
+    height: 150px; 
+    width: 95%;
+    border-radius: 10px;
+    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+    font-weight: 100;
+    color: #555555; 
+    font-size: 1rem; 
+}
+
+.button-page {
+    background-color: white; 
+    border: 1px solid lightgray; 
+    color: #666666; 
+    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+    font-weight: 500;
+    padding: 10px 20px; 
+    border-radius: 10px; 
+    transition: background-color .2s, color .2s;  
+}
+
+.button-page:hover {
+    background-color: grey;
+    color: black; 
+    border: 1px solid darkgray;
+    transition: background-color .2s, color .2s; 
+    cursor: pointer;  
+}
+
+.line {
+    display: flex; 
+    height: 10px; 
+    width: 60%;
+    border-top: 1px solid #bdbdbd; 
+}
+
+.next-section {
+    display: flex; 
+    flex-direction: column;
+    align-items: center;
+}
+
+.page-img-full {
+    max-width: 50%;
+}
