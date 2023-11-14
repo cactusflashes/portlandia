@@ -1,7 +1,7 @@
 <title>Joseph - Home</title>
 <script>
     import { AnimatedHeadline } from 'svelte-animated-headline';
-    import upto1 from '$lib/upto1.jpg';
+    import upto1 from '$lib/me.jpg';
 
 </script>
 
@@ -13,21 +13,20 @@
         <div class="header-container">
             <h1>Hello, I'm Joseph.</h1>
             <h2 class="animated-text">
-                I'm a&nbsp<strong>
+                I'm a&nbsp<strong style="color: #4287f5">
                 <AnimatedHeadline
                 texts={[
                 "Front-End Engineer",
+                "Web Developer", 
                 "UI/UX Designer", 
                 "iOS Engineer",
                 "Visual Designer", 
                 "Marketing Analyst", 
-                "Web Designer", 
-                "Web Developer", 
                 "Motion Designer", 
                 ]} 
                 wait={400}> 
                 </AnimatedHeadline></strong>
-                &nbspworking remotely from <h2 style="color: #4287f5; font-weight: 600"> &nbsp;sunny&nbsp;</h2>Arizona.
+                &nbspworking remotely from sunny Arizona.
             </h2>
 
             <!--700px and below display text-->
@@ -51,7 +50,7 @@
                 </div>
             </a>
 
-        <div class="body-wrap-2"></div>
+        <div class="body-wrap-3"></div>
 
         <div class="project-container">
             <a class="doodle-bot" href="/doodlebot">
@@ -63,7 +62,7 @@
             </a>
         </div>
 
-        <div class="body-wrap-2"></div>
+        <div class="body-wrap-3"></div>
 
         <div class="project-container">
             <a class="google-storage" href="/google">
@@ -76,7 +75,7 @@
         </div>
         <!--end projs-->
 
-        <div class="body-wrap-1"></div>
+        <div class="body-wrap-2"></div>
 
         <!--what I've been up to-->
         <h1 class="up-to">What I've been up to</h1>

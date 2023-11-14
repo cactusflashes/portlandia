@@ -30,20 +30,26 @@ li {
     font-weight: 500;
     font-size: .9rem;
     padding: 10px 10px;
-    border-radius: 10px;
-    transition: background-color 0.5s, color 0.3s;
+    border-radius: 16px;
+    transition: background-color 0.5s, color 0.5s, border 0.3s;
+    border: 1px solid transparent;
+
 }
 
 li:hover {
     display: flex;
-    background-color: #4287f5;
+    border: 1px solid #4287f5;
     font-family: -apple-system, BlinkMacSystemFont, 'Urbanist', sans-serif;
     cursor: pointer;
-    transition: background-color 0.5s, color 0.3s;
+    transition: background-color 0.5s, color 0.5s, border 0.3s;
+}
+
+a {
+    transition: background-color 0.5s, color 0.5s, border 0.3s;
 }
 
 li:hover a {
-    color: white; 
+    color: #4287f5; 
     transition: color 0.2s; 
 }
 

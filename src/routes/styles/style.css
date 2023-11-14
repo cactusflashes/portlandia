@@ -51,7 +51,7 @@ body {
 
 .animated-text {
     display: flex; 
-    color: #666
+    color: #666; 
 }
 
 
@@ -183,17 +183,15 @@ a {
     display: flex;
     background-color: #4287f5;
     background-image: url('/src/lib/ai-bg-01.png');
-    background-size: 100%; 
+    background-size: 80%; 
     background-position: center;
     background-repeat: no-repeat;
-    min-height: 700px;
+    min-height: 500px;
     max-height: 900px;
-    width: 70%; 
-    min-width: 400px;
-    max-width: 1800px;
+    width: 60%; 
     transition: border 0.5s, color 0.3s, margin-top 0.5s, background-color .5s;
     border: 1.5px solid #bdbdbd; 
-    border-radius: 30px;
+    border-radius: 40px;
     flex-direction: column;
     overflow: hidden;
     align-items: flex-end;
@@ -208,14 +206,14 @@ a {
     background-size: 70%; 
     background-repeat: no-repeat;
     background-color: #4287f5;
-    height: 60vh;
-    min-height: 700px;
+    height: 50vh;
+    min-height: 500px;
     max-height: 900px;
-    width: 70%; 
+    width: 60%; 
     max-width: 1800px;
     transition: border 0.5s, color 0.3s, margin-top 0.5s;
     border: 1.5px solid #d5d5d5;
-    border-radius: 30px;
+    border-radius: 40px;
     flex-direction: column;
     overflow: hidden;
     align-items: flex-end;
@@ -227,17 +225,17 @@ a {
     position: relative;
     background-color: #4287f5;
     background-image: url('/src/lib/google-proj-01.png');
-    background-size: 100%; 
+    background-size: 80%; 
     background-position: center;
     background-repeat: no-repeat;
     align-items: flex-end;
-    height: 60vh;
+    height: 50vh;
     max-height: 900px;
     max-width: 1800px;
-    min-height: 700px;
+    min-height: 500px;
     transition: border 0.5s, margin-top 0.5s; 
-    width: 70%; 
-    border-radius: 30px;
+    width: 60%; 
+    border-radius: 40px;
     flex-direction: column;
     overflow: hidden;
     border: 1.5px solid #d5d5d5;
@@ -368,7 +366,7 @@ a {
     color: gray;
     scale: 0.75; 
     align-items: flex-start;
-    width: 90%;
+    width: 70%;
     margin-bottom: 10px;
 }
 
@@ -392,7 +390,7 @@ a {
         width: 80%;
         min-height: 300px;
         max-height: 300px;
-        background-size: 100%;
+        background-size: 70%;
     }
 
     .p-txt-con {
@@ -473,7 +471,7 @@ a {
         min-height: 300px;
         min-width: 80%;
         max-height: 300px;
-        background-size: 100%;
+        background-size: 80%;
     }
 
 
